@@ -1,0 +1,79 @@
+/* @author: John Lusky
+   Date: 1/11/16
+ */
+
+/// Imports
+@import "_normalize";
+@import "_boilerplate";
+@import "_mixins";
+@import "_typography";
+
+/// Colors
+$white: #ffffff;
+$black: #000000;
+$green: #00fa87;
+$blue: #22d7fd;
+$dark-gray: #1c1d1e;
+$darkest-gray: #151515;
+
+
+/// Global Styles
+body {
+    -webkit-font-smoothing: antialiased;
+    background: $darkest-gray;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    width: 100%;
+    color: $white;
+}
+
+h1, h2 {
+    @include font-oswald-bold;
+    color: $green;
+}
+
+a {
+    font-family: $font-arial;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+#main-view {
+    position: relative;
+    display: block;
+    width: 1280px;
+    height: 720px;
+    margin: 20px auto 0;
+    border: 5px dotted $blue;
+    overflow: hidden;
+}
+
+#controls {
+    display: block;
+    width: 1280px;
+    height: 200px;
+    margin: 20px auto 0;
+    padding: 15px;
+    background: $dark-gray;
+    border: 5px solid $green;
+    box-sizing: border-box;
+
+    h1 {
+        margin-top: 0;
+        font-size: 20px;
+        font-style: italic;
+        text-transform: uppercase;
+    }
+}
+
+//Global Modules
+@import "modules/buttons";
+
+//Effect Modules
+@import "modules/effect1";

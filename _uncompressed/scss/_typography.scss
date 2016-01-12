@@ -1,0 +1,20 @@
+/// Fonts
+$font-arial: arial, helvetica, sans-serif;
+$font-oswald: 'Oswald', sans-serif;
+
+@mixin font-oswald-light() {
+    font-family: $font-oswald;
+    font-weight: 300;
+}
+
+@mixin font-oswald-regular() {
+    font-family: $font-oswald;
+    font-weight: 400;
+}
+
+@mixin font-oswald-bold() {
+    font-family: $font-oswald;
+    font-weight: 700;
+}
+
+// @font-face calls
