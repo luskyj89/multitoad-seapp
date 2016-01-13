@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Multitoad SEAPP 1.0.0</title>
+        <title>Multitoad SEAPP 1.2.0</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,7 +11,11 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/foundation.min.css">
+        <link rel="stylesheet" href="css/beat-that-toadboy.css">
         <link rel="stylesheet" href="css/styles.css">
+
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="js/vendor/TweenMax.min.js"></script>
     </head>
@@ -24,20 +28,100 @@
 
         <section id="main-view">
 
+            <section id="top">
+
+                <div id="speech-bubble">
+                    <span class="decision"></span>
+                </div>
+
+                <figure id="logo"></figure>
+                <figure id="toadboy"></figure>
+                <figure id="grass"></figure>
+
+                <figure id="toadboy-hand"></figure>
+                <figure id="player-hand"></figure>
+
+            </section>
+
             <div id="effect-1"></div>
             <figure id="effect-1-title"></figure>
 
         </section>
 
         <section id="controls">
-            <h1>Multitoad SEAPP&trade; &ndash; v1.0.0</h1>
-            <a id="button" class="effect-btn" href="#">Dunked</a>
+
+            <div id="effect-fire">
+                <h1>Multitoad SEAPP&trade; &ndash; v1.2.0</h1>
+
+                <a id="button" class="effect-btn" href="#">Dunked</a>
+
+            </div>
+
+            <div id="btt-controls">
+
+                <select id="player-choice" name="playerchoice">
+                    <option value="Player's Selection">Player's Selection</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Paper">Paper</option>
+                    <option value="Scissors">Scissors</option>
+                </select>
+
+                <label>
+                    <input id="username" type="text" name="username" value="Username" />
+                </label>
+
+                <div class="small button-group">
+                    <a href="#" id="run" class="button">RUN</a>
+                    <a href="./?toadboy=on" id="reset" class="button">RESET</a>
+                </div>
+
+            </div>
+
+            <div id="mixer">
+
+                <div id="master-vol-slider" class="slider vertical" data-slider data-initial-start="50" data-end="100" data-vertical="true">
+                  <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+                  <span class="slider-fill" data-slider-fill></span>
+                  <input type="hidden">
+                </div>
+
+                <span class="current-volume">Volume: 50%</span>
+
+                <label class="mixer-input">Key Color
+                  <select id="color-key">
+                    <option value="notselected">Not Selected</option>
+                    <option value="purple">Purple</option>
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                  </select>
+                </label>
+
+                <!-- <label id="custom-text-label" class="mixer-input">Custom Text
+                    <input id="custom-text" type="text" placeholder="(Optional)">
+                </label> -->
+
+                <div class="switch">
+                    <input class="switch-input" id="bttSwitch" type="checkbox" name="bttSwitch">
+                    <label class="switch-paddle" for="bttSwitch">
+                        <span class="show-for-sr">Activate Beat That Toadboy</span>
+                    </label>
+                </div>
+
+            </div>
+
         </section>
+
+        <footer>
+            &copy; 2016 <a href="http://multitoad.com" target="_blank">Multitoad.com</a> | Created by <a href="http://johnlusky.com" target="_blank">John Lusky</a> | All Rights Reserved
+        </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+
+        <script src="js/foundation.min.js"></script>
         <script src="js/plugins.js"></script>
-        <script src="js/scripts.min.js"></script>
+        <script src="js/beat-that-toadboy.js"></script>
+        <script src="js/app.min.js"></script>
 
     </body>
 </html>

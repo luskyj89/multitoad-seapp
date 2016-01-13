@@ -1,0 +1,47 @@
+// Hide Beat That Toadboy unless it's toggled
+#top {
+    display: none;
+}
+
+#btt-controls {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 387px;
+    width: 300px;
+    height: 168px;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 20px;
+
+    label {
+        color: $white;
+    }
+}
+
+.switch {
+    position: absolute;
+    top: 47px;
+    right: 20px;
+
+    &:before {
+        position: absolute;
+        top: -34px;
+        left: 6px;
+        content: " ";
+        height: 50px;
+        width: 50px;
+        background: url(../images/logo-bttb.png) no-repeat;
+        background-size: 100%;
+        z-index: 100;
+    }
+}
+
+.switch-paddle {
+    height: 2.2rem;
+    background: $darkest-gray;
+    border: 2px solid rgba(34, 215, 253, 0.71);
+}
+
+input:checked~.switch-paddle {
+    background: $blue;
+}

@@ -1,14 +1,29 @@
 .effect-btn {
     display: inline-block;
     padding: 8px 20px;
+    background: rgba(0, 0, 0, 0.29);
     @include font-oswald-bold;
     text-transform: uppercase;
     font-style: italic;
-    border-bottom: 3px solid $blue;
+    color: $white;
+    border-left: 23px solid $blue;
     transition: all .4s ease-out;
 
     &:hover {
         color: $blue;
-        border-bottom: 3px solid $white;
+        border-left: 23px solid $white;
     }
+
+    &:focus {
+        color: $blue;
+    }
+}
+
+.button {
+    color: $black;
+    background-color: $blue;
+}
+
+.button-group .button:not(:last-child) {
+    border-right: 1px solid $darkest-gray;
 }

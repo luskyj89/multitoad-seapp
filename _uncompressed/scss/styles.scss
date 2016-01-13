@@ -13,9 +13,12 @@ $white: #ffffff;
 $black: #000000;
 $green: #00fa87;
 $blue: #22d7fd;
+$light-gray: #E4E4E4;
 $dark-gray: #1c1d1e;
 $darkest-gray: #151515;
 
+/// Global Vars
+$width: 1280px;
 
 /// Global Styles
 body {
@@ -33,9 +36,7 @@ h1, h2 {
 }
 
 a {
-    font-family: $font-arial;
-    font-weight: 700;
-    color: white;
+    color: $blue;
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 
@@ -47,22 +48,27 @@ a {
 #main-view {
     position: relative;
     display: block;
-    width: 1280px;
+    width: $width;
     height: 720px;
     margin: 20px auto 0;
+    background-color: $dark-gray;
     border: 5px dotted $blue;
     overflow: hidden;
+    transition: all .4s ease-out;
 }
 
 #controls {
     display: block;
-    width: 1280px;
-    height: 200px;
+    position: relative;
+    box-sizing: border-box;
+    width: $width;
+    height: 207px;
     margin: 20px auto 0;
     padding: 15px;
-    background: $dark-gray;
-    border: 5px solid $green;
-    box-sizing: border-box;
+    background: rgba(53, 53, 53, 0.48);
+    border: 5px solid rgba(93, 93, 93, 0.35);
+    border-radius: 10px;
+    transition: all 1.5s ease-out;
 
     h1 {
         margin-top: 0;
@@ -70,10 +76,41 @@ a {
         font-style: italic;
         text-transform: uppercase;
     }
+
 }
 
-//Global Modules
+#effect-fire {
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    width: 70%;
+}
+
+#mixer {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 30%;
+    padding: 15px 5px;
+    background: rgba(0, 0, 0, 0.29);
+}
+// Mixer SCSS
+@import "modules/mixer";
+
+footer {
+    display: block;
+    width: $width;
+    margin: 20px auto;
+    font-size: 12px;
+}
+
+
+// Global Modules
 @import "modules/buttons";
 
-//Effect Modules
+// Effect Modules
 @import "modules/effect1";
+
+// Beat That Toadboy!
+@import "modules/beat-that-toadboy";

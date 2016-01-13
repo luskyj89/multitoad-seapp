@@ -27,7 +27,7 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function() {
   return gulp.src('../_uncompressed/js/**/*.js')
-    .pipe(concat('scripts.js'))
+    .pipe(concat('app.js'))
     .pipe(gulp.dest('../_uncompressed/js/'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
