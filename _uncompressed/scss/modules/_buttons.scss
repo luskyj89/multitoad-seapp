@@ -24,6 +24,16 @@
     }
 }
 
+.sound-btn {
+    border-left: 10px solid $green;
+    color: $white;
+
+    &:hover {
+        color: $green;
+        border-left: 10px solid $white;
+    }
+}
+
 .button {
     color: $black;
     background-color: $blue;

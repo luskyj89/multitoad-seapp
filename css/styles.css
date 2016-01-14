@@ -624,6 +624,13 @@ footer {
   .effect-btn.first {
     margin-left: 0; }
 
+.sound-btn {
+  border-left: 10px solid #00fa87;
+  color: #ffffff; }
+  .sound-btn:hover {
+    color: #00fa87;
+    border-left: 10px solid #ffffff; }
+
 .button {
   color: #000000;
   background-color: #22d7fd; }

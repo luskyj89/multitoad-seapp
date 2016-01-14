@@ -24,9 +24,11 @@ var bttControls         = $("#btt-controls");
 
 // Audio Vars
 var button              = $("#button");
-var customCheerButton = $("#custom-cheer-button");
+var customCheerButton   = $("#custom-cheer-button");
 var audio               = document.getElementById('audio');
 var customCheerAudio    = document.getElementById('custom-cheer-audio');
+var holyShitAudio       = document.getElementById('holy-shit-audio');
+var holyShitButton      = $("#holy-shit-button");
 
 // Query string variable to find url settings
 var queryString         = window.location.search;
@@ -92,6 +94,7 @@ function mixer() {
         // Adjust volume based on new slider position
         audio.volume = currentVolume;
         customCheerAudio.volume = currentVolume;
+        holyShitAudio.volume = currentVolume;
 
         // Set our volume display
         currentVolumeLabel.html("Volume: " + Math.round(currentVolume * 100) + "%");
@@ -178,8 +181,17 @@ function init() {
 
     };
 
+    function playHolyShitAudio(e) {
+
+        e.preventDefault();
+
+        holyShitAudio.play(); // audio will load and then play
+
+    };
+
     button.click(playAudio);
     customCheerButton.click(playCustomCheerAudio);
+    holyShitButton.click(playHolyShitAudio);
 
     // Init mixer
     mixer();
