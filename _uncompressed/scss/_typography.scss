@@ -1,6 +1,7 @@
 /// Fonts
 $font-arial: arial, helvetica, sans-serif;
 $font-oswald: 'Oswald', sans-serif;
+$font-outage: 'Outage', sans-serif;
 
 @mixin font-oswald-light() {
     font-family: $font-oswald;
@@ -15,6 +16,11 @@ $font-oswald: 'Oswald', sans-serif;
 @mixin font-oswald-bold() {
     font-family: $font-oswald;
     font-weight: 700;
+}
+
+@mixin font-outage() {
+    font-family: $font-outage;
+    font-weight: normal;
 }
 
 // @font-face calls

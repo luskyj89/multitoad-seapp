@@ -1,0 +1,33 @@
+#custom-cheer-text {
+    //opacity: 0;
+    display: block;
+    position: absolute;
+    top: -300px;
+    left: 50%;
+    width: 900px;
+    padding: 10px 90px 0px;
+    margin-left: -450px;
+    background: $darkest-gray;
+    @include font-outage;
+    font-size: 65px;
+    color: $green;
+    text-align: center;
+    text-shadow: 2px 2px $black;
+    border: 13px solid $green;
+    -webkit-animation: shift .1s linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes shift {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(3deg);
+    }
+    100% {
+        transform: rotateZ(-3deg);
+    }
+}

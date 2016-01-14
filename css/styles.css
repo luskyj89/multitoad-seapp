@@ -607,6 +607,7 @@ footer {
 .effect-btn {
   display: inline-block;
   padding: 8px 20px;
+  margin: 5px;
   background: rgba(0, 0, 0, 0.29);
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
@@ -620,6 +621,8 @@ footer {
     border-left: 23px solid #ffffff; }
   .effect-btn:focus {
     color: #22d7fd; }
+  .effect-btn.first {
+    margin-left: 0; }
 
 .button {
   color: #000000;
@@ -630,27 +633,59 @@ footer {
 
 #effect-1 {
   position: absolute;
-  top: 100px;
+  top: 1000px;
   left: 50%;
   width: 900px;
   height: 500px;
   margin-left: -450px;
   background: url(../images/dunked/bg-dunked.png) no-repeat;
   background-size: 100%;
-  z-index: 1;
-  opacity: 0; }
+  z-index: 1; }
 
 #effect-1-title {
   position: absolute;
-  top: -100px;
+  top: -1000px;
   left: 50%;
   width: 900px;
   height: 500px;
   margin-left: -450px;
   background: url(../images/dunked/title-dunked.png) no-repeat;
   background-size: 100%;
-  z-index: 10;
-  opacity: 0; }
+  z-index: 10; }
+
+#custom-cheer-text {
+  display: block;
+  position: absolute;
+  top: -300px;
+  left: 50%;
+  width: 900px;
+  padding: 10px 90px 0px;
+  margin-left: -450px;
+  background: #151515;
+  font-family: 'Outage', sans-serif;
+  font-weight: normal;
+  font-size: 65px;
+  color: #00fa87;
+  text-align: center;
+  text-shadow: 2px 2px #000000;
+  border: 13px solid #00fa87;
+  -webkit-animation: shift .1s linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite; }
+
+@-webkit-keyframes shift {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg); }
+
+  50% {
+    -webkit-transform: rotateZ(3deg);
+            transform: rotateZ(3deg); }
+
+  100% {
+    -webkit-transform: rotateZ(-3deg);
+            transform: rotateZ(-3deg); } }
 
 #top {
   display: none; }

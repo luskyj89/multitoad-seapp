@@ -1,22 +1,34 @@
 /* ----------------------------------------
    Public Vars
 --------------------------------------- */
-var effect1, effect1Title, masterVolSilder, masterVolume, currentVolume, audio, button, selectedColor;
+var effect1, effect1Title, masterVolSilder, masterVolume, currentVolume, audio, button, selectedColor,
+customCheerButton, customCheerAudio;
 
 var controls            = $("#controls");
 var mainView            = $("#main-view");
+
+// Effect Specific
 var effect1             = $("#effect-1");
 var effect1Title        = $("#effect-1-title");
+var customCheerEffect   = $("#custom-cheer-text");
+var customTextInput     = $("#custom-text").val();
+
+// Mixer Vars
 var masterVolSlider     = $("#master-vol-slider");
 var masterVolHandle     = $("#master-vol-slider > .slider-handle");
 var currentVolumeLabel  = $(".current-volume");
-var button              = $('#button');
-var audio               = document.getElementById('audio');
 var keyColor            = $("#color-key");
 var bttSwitch           = $("#bttSwitch");
 var bttGame             = $("#top");
 var bttControls         = $("#btt-controls");
 
+// Audio Vars
+var button              = $("#button");
+var customCheerButton = $("#custom-cheer-button");
+var audio               = document.getElementById('audio');
+var customCheerAudio    = document.getElementById('custom-cheer-audio');
+
+// Query string variable to find url settings
 var queryString         = window.location.search;
 
 /* ----------------------------------------
@@ -24,29 +36,43 @@ var queryString         = window.location.search;
 --------------------------------------- */
 
 function closeEffect1() {
-    effect1.animate({
-        opacity: 0,
-        top: "100"
-    }, 1000);
 
-    effect1Title.animate({
-        opacity: 0,
-        top: "-100"
-    }, 1000);
+    effect1.animate({ top: "100" }, 4000);
+
+    setTimeout(function() {
+        effect1.animate({ top: "1000" }, 1000);
+
+        effect1Title.animate({ top: "-1000" }, 1000);
+    }, 3000);
 
     controls.css("border-color", "rgba(93, 93, 93, 0.35)");
 }
 
 function runEffect1() {
-    effect1.animate({
-        opacity: 1,
-        top: "50"
-    }, 3000, closeEffect1);
+    effect1.animate({ top: "50" }, 500, closeEffect1);
+    effect1Title.animate({ top: "50" }, 500);
 
-    effect1Title.animate({
-        opacity: 1,
-        top: "50"
-    }, 500);
+    controls.css("border-color", "#00fa87");
+}
+
+function closeEffect2() {
+
+    setTimeout(function() {
+        customCheerEffect.animate({ top: "-300" }, 500, "easeInElastic");
+
+        controls.css("border-color", "rgba(93, 93, 93, 0.35)");
+    }, 6000);
+
+}
+
+function runEffect2() {
+    var customTextInput = $("#custom-text").val();
+
+    if (customTextInput != "") {
+        customCheerEffect.html(customTextInput);
+    }
+
+    customCheerEffect.animate({ top: "295" }, 1500, "easeOutElastic", closeEffect2);
 
     controls.css("border-color", "#00fa87");
 }
@@ -65,6 +91,7 @@ function mixer() {
 
         // Adjust volume based on new slider position
         audio.volume = currentVolume;
+        customCheerAudio.volume = currentVolume;
 
         // Set our volume display
         currentVolumeLabel.html("Volume: " + Math.round(currentVolume * 100) + "%");
@@ -142,7 +169,17 @@ function init() {
 
     };
 
+    function playCustomCheerAudio(e) {
+
+        e.preventDefault();
+
+        customCheerAudio.play(); // audio will load and then play
+        runEffect2(); // play effect 2 custom cheer
+
+    };
+
     button.click(playAudio);
+    customCheerButton.click(playCustomCheerAudio);
 
     // Init mixer
     mixer();

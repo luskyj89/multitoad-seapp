@@ -26,6 +26,11 @@
             <!-- <source src="audio/laugh_track_v2.ogg" type="audio/ogg" /> -->
         </audio>
 
+        <audio id="custom-cheer-audio">
+            <source src="audio/crowd-cheer.m4a" type="audio/mpeg" />
+            <!-- <source src="audio/laugh_track_v2.ogg" type="audio/ogg" /> -->
+        </audio>
+
         <section id="main-view">
 
             <section id="top">
@@ -43,8 +48,12 @@
 
             </section>
 
+            <!-- Dunked Effect -->
             <div id="effect-1"></div>
             <figure id="effect-1-title"></figure>
+
+            <!-- Custom Cheer -->
+            <span id="custom-cheer-text">Unbelievable!</span>
 
         </section>
 
@@ -53,7 +62,8 @@
             <div id="effect-fire">
                 <h1>Multitoad SEAPP&trade; Alpha &ndash; v1.2.0</h1>
 
-                <a id="button" class="effect-btn" href="#">Dunked</a>
+                <a id="button" class="effect-btn first" href="#">Dunked</a>
+                <a id="custom-cheer-button" class="effect-btn" href="#">Custom Cheer</a>
 
             </div>
 
@@ -96,9 +106,9 @@
                   </select>
                 </label>
 
-                <!-- <label id="custom-text-label" class="mixer-input">Custom Text
+                <label id="custom-text-label" class="mixer-input">Custom Text
                     <input id="custom-text" type="text" placeholder="(Optional)">
-                </label> -->
+                </label>
 
                 <div class="switch">
                     <input class="switch-input" id="bttSwitch" type="checkbox" name="bttSwitch">

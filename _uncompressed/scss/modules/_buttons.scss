@@ -1,6 +1,7 @@
 .effect-btn {
     display: inline-block;
     padding: 8px 20px;
+    margin: 5px;
     background: rgba(0, 0, 0, 0.29);
     @include font-oswald-bold;
     text-transform: uppercase;
@@ -16,6 +17,10 @@
 
     &:focus {
         color: $blue;
+    }
+
+    &.first {
+        margin-left: 0;
     }
 }
 
