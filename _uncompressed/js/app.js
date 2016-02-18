@@ -39,13 +39,13 @@ var queryString         = window.location.search;
 
 function closeEffect1() {
 
-    effect1.animate({ top: "100" }, 4000);
+    effect1.animate({ top: "100" }, 2000);
 
     setTimeout(function() {
         effect1.animate({ top: "1000" }, 1000);
 
         effect1Title.animate({ top: "-1000" }, 1000);
-    }, 3000);
+    }, 1500);
 
     controls.css("border-color", "rgba(93, 93, 93, 0.35)");
 }
@@ -63,7 +63,7 @@ function closeEffect2() {
         customCheerEffect.animate({ top: "-300" }, 500, "easeInElastic");
 
         controls.css("border-color", "rgba(93, 93, 93, 0.35)");
-    }, 6000);
+    }, 1000);
 
 }
 
