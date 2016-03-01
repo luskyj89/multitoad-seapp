@@ -21,6 +21,7 @@ var keyColor            = $("#color-key");
 var bttSwitch           = $("#bttSwitch");
 var bttGame             = $("#top");
 var bttControls         = $("#btt-controls");
+var scoreSwitch         = $("#scoreSwitch");
 
 // Audio Vars
 var button              = $("#button");
@@ -147,6 +148,10 @@ function beatThatToadboy() {
             bttSwitch.addClass("btt-on");
             bttGame.fadeIn();
             bttControls.slideDown();
+
+            if ( scoreSwitch.hasClass("score-on") ) {
+                scoreSwitch.trigger("click");
+            }
         }
 
     });
@@ -199,6 +204,8 @@ function init() {
     keyPicker();
     // Init Beat That Toadboy!
     beatThatToadboy();
+    // Init MTSC Scoreboard
+    mtscScoreboard();
 
 }
 

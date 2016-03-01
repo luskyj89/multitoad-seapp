@@ -596,6 +596,7 @@ a {
   color: #ffffff; }
 
 #custom-text {
+  width: 163px;
   margin-bottom: 0; }
 
 footer {
@@ -697,7 +698,7 @@ footer {
 #top {
   display: none; }
 
-#btt-controls {
+#btt-controls, #scoreboard-controls {
   display: none;
   position: absolute;
   top: 15px;
@@ -705,15 +706,17 @@ footer {
   width: 300px;
   height: 168px;
   background-color: rgba(0, 0, 0, 0.45);
-  padding: 20px; }
-  #btt-controls label {
+  padding: 20px;
+  overflow-y: auto; }
+  #btt-controls label, #scoreboard-controls label {
     color: #ffffff; }
 
-.switch {
+.switch-wrap {
   position: absolute;
   top: 47px;
-  right: 20px; }
-  .switch:before {
+  right: 20px;
+  width: 65px; }
+  .switch-wrap:before {
     position: absolute;
     top: -34px;
     left: 6px;
@@ -724,6 +727,21 @@ footer {
     background-size: 100%;
     z-index: 100; }
 
+.switch {
+  margin-bottom: 3px; }
+
+.button-group {
+  margin-top: 10px; }
+  .button-group .switch {
+    float: left;
+    margin: -15px 10px 0; }
+
+.switch-title {
+  display: block;
+  width: 100%;
+  font-size: 10px;
+  text-align: center; }
+
 .switch-paddle {
   height: 2.2rem;
   background: #151515;
@@ -731,3 +749,89 @@ footer {
 
 input:checked ~ .switch-paddle {
   background: #22d7fd; }
+
+#scoreboard-frame {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  z-index: 1000;
+  overflow: hidden;
+  font-family: 'Oswald', sans-serif; }
+
+#left-player, #right-player {
+  position: absolute;
+  top: -44px;
+  width: 381px;
+  height: 44px;
+  background-size: 100%;
+  background-color: transparent;
+  background-repeat: no-repeat; }
+  #left-player span, #right-player span {
+    display: block;
+    height: 31px;
+    overflow-y: hidden;
+    color: white;
+    margin-top: 3px;
+    font-size: 19px;
+    font-weight: 600;
+    font-style: italic; }
+
+#left-player {
+  left: 240px;
+  background-image: url(../images/bg-left-player.png); }
+  #left-player span {
+    margin-left: 45px; }
+
+#right-player {
+  right: 240px;
+  background-image: url(../images/bg-right-player.png); }
+  #right-player span {
+    text-align: right;
+    margin-right: 45px;
+    padding-right: 5px; }
+
+#game-type {
+  position: absolute;
+  top: -117px;
+  left: 50%;
+  width: 235px;
+  height: 101px;
+  margin-left: -122px;
+  background-image: url(../images/game-type.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 100; }
+  #game-type span {
+    display: block;
+    color: white;
+    text-align: center;
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic; }
+
+#left-score, #right-score {
+  position: absolute;
+  width: 54px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: 100; }
+  #left-score span, #right-score span {
+    display: block;
+    color: white;
+    text-align: center;
+    margin-top: 3px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #000; }
+
+#left-score {
+  top: -40px;
+  left: 224px;
+  background-image: url(../images/green-toad.png); }
+
+#right-score {
+  top: -40px;
+  right: 224px;
+  background-image: url(../images/blue-toad.png); }
