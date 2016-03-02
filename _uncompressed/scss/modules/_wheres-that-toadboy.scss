@@ -1,0 +1,88 @@
+
+#wtt-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1280px;
+    height: 720px;
+    padding: 0 43px;
+    background: $black;
+    background-size: 100%;
+    z-index: 10;
+}
+
+#wtt-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1280px;
+    height: 720px;
+    background: $black url(../images/wheres-that-toadboy/bg.png) no-repeat;
+    z-index: 15;
+    animation-name: light-flasher;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes light-flasher {
+    0%   { opacity: .3; }
+    100%  { opacity: 1; }
+}
+
+
+.door-frame {
+    position: relative;
+    float: left;
+    width: 347px;
+    height: 548px;
+    margin: 75px 25px 0;
+    background-color: $green;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 16;
+}
+
+.door-opening {
+    position: absolute;
+    top: 37px;
+    left: 33px;
+    width: 280px;
+    height: 480px;
+    background: $black;
+    background: -moz-linear-gradient(top,  $black 0%, #003f4c 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  $black 0%,#003f4c 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  $black 0%,#003f4c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#003f4c',GradientType=0 ); /* IE6-9 */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 20;
+}
+
+.door {
+    position: absolute;
+    top: 36px;
+    left: 32px;
+    width: 282px;
+    height: 482px;
+    background: $black;
+    border: 5px solid $green;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 30;
+}
+
+.door-1 {
+    background: $black url(../images/wheres-that-toadboy/door-1.png) no-repeat;
+    background-position: center;
+}
+
+.door-2 {
+    background: $black url(../images/wheres-that-toadboy/door-2.png) no-repeat;
+    background-position: center;
+}
+
+.door-3 {
+    background: $black url(../images/wheres-that-toadboy/door-3.png) no-repeat;
+    background-position: center;
+}

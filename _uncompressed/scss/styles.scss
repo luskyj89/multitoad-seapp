@@ -83,7 +83,7 @@ a {
     display: block;
     box-sizing: border-box;
     float: left;
-    width: 70%;
+    width: 50%;
 }
 
 #mixer {
@@ -91,8 +91,8 @@ a {
     position: relative;
     box-sizing: border-box;
     float: left;
-    width: 30%;
-    padding: 15px 5px;
+    width: 50%;
+    padding: 18px 5px;
     background: rgba(0, 0, 0, 0.29);
 }
 // Mixer SCSS
@@ -116,3 +116,4 @@ footer {
 // Addons, including scoreboard and Beat That Toadboy
 @import "modules/addons";
 @import "modules/mtsc-scoreboard";
+@import "modules/wheres-that-toadboy";

@@ -543,15 +543,15 @@ a {
   display: block;
   box-sizing: border-box;
   float: left;
-  width: 70%; }
+  width: 50%; }
 
 #mixer {
   display: block;
   position: relative;
   box-sizing: border-box;
   float: left;
-  width: 30%;
-  padding: 15px 5px;
+  width: 50%;
+  padding: 18px 5px;
   background: rgba(0, 0, 0, 0.29); }
 
 #master-vol-slider {
@@ -702,7 +702,7 @@ footer {
   display: none;
   position: absolute;
   top: 15px;
-  right: 387px;
+  right: 635px;
   width: 300px;
   height: 168px;
   background-color: rgba(0, 0, 0, 0.45);
@@ -835,3 +835,97 @@ input:checked ~ .switch-paddle {
   top: -40px;
   right: 224px;
   background-image: url(../images/blue-toad.png); }
+
+#wtt-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 720px;
+  padding: 0 43px;
+  background: #000000;
+  background-size: 100%;
+  z-index: 10; }
+
+#wtt-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 720px;
+  background: #000000 url(../images/wheres-that-toadboy/bg.png) no-repeat;
+  z-index: 15;
+  -webkit-animation-name: light-flasher;
+          animation-name: light-flasher;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; }
+
+@-webkit-keyframes light-flasher {
+  0% {
+    opacity: .3; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes light-flasher {
+  0% {
+    opacity: .3; }
+
+  100% {
+    opacity: 1; } }
+
+.door-frame {
+  position: relative;
+  float: left;
+  width: 347px;
+  height: 548px;
+  margin: 75px 25px 0;
+  background-color: #00fa87;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 16; }
+
+.door-opening {
+  position: absolute;
+  top: 37px;
+  left: 33px;
+  width: 280px;
+  height: 480px;
+  background: #000000;
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #000000 0%, #003f4c 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#003f4c',GradientType=0 );
+  /* IE6-9 */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 20; }
+
+.door {
+  position: absolute;
+  top: 36px;
+  left: 32px;
+  width: 282px;
+  height: 482px;
+  background: #000000;
+  border: 5px solid #00fa87;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 30; }
+
+.door-1 {
+  background: #000000 url(../images/wheres-that-toadboy/door-1.png) no-repeat;
+  background-position: center; }
+
+.door-2 {
+  background: #000000 url(../images/wheres-that-toadboy/door-2.png) no-repeat;
+  background-position: center; }
+
+.door-3 {
+  background: #000000 url(../images/wheres-that-toadboy/door-3.png) no-repeat;
+  background-position: center; }
