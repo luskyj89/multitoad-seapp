@@ -29,6 +29,7 @@ var customCheerButton   = $("#custom-cheer-button");
 var audio               = document.getElementById('audio');
 var customCheerAudio    = document.getElementById('custom-cheer-audio');
 var holyShitAudio       = document.getElementById('holy-shit-audio');
+var gameShowAudio       = document.getElementById('game-show-audio');
 var holyShitButton      = $("#holy-shit-button");
 
 // Query string variable to find url settings
@@ -96,6 +97,7 @@ function mixer() {
         audio.volume = currentVolume;
         customCheerAudio.volume = currentVolume;
         holyShitAudio.volume = currentVolume;
+        gameShowAudio.volume = currentVolume;
 
         // Set our volume display
         currentVolumeLabel.html("Volume: " + Math.round(currentVolume * 100) + "%");
@@ -141,17 +143,23 @@ function beatThatToadboy() {
 
         if ( bttSwitch.hasClass("btt-on") ) {
             bttSwitch.removeClass("btt-on");
-            bttGame.fadeOut();
+            bttGame.hide();
             bttControls.slideUp();
         }
         else {
             bttSwitch.addClass("btt-on");
-            bttGame.fadeIn();
+            bttGame.show();
             bttControls.slideDown();
 
             if ( scoreSwitch.hasClass("score-on") ) {
                 scoreSwitch.trigger("click");
             }
+
+            if ( wttSwitch.hasClass("wtt-on") ) {
+                wttSwitch.trigger("click");
+            }
+
+            gameShowAudio.play();
         }
 
     });
@@ -163,36 +171,48 @@ function beatThatToadboy() {
 }
 
 /* ----------------------------------------
+   Audio Players
+--------------------------------------- */
+
+function playAudio(e) {
+
+    e.preventDefault();
+
+    audio.play(); // audio will load and then play
+    runEffect1(); // play effect 1 title animation
+
+};
+
+function playCustomCheerAudio(e) {
+
+    e.preventDefault();
+
+    customCheerAudio.play(); // audio will load and then play
+    runEffect2(); // play effect 2 custom cheer
+
+};
+
+function playHolyShitAudio(e) {
+
+    e.preventDefault();
+
+    holyShitAudio.play(); // audio will load and then play
+
+};
+
+function playGameShowAudio(e) {
+
+    e.preventDefault();
+
+    gameShowAudio.play(); // audio will load and then play
+
+};
+
+/* ----------------------------------------
    Init
 --------------------------------------- */
 
 function init() {
-
-    function playAudio(e) {
-
-        e.preventDefault();
-
-        audio.play(); // audio will load and then play
-        runEffect1(); // play effect 1 title animation
-
-    };
-
-    function playCustomCheerAudio(e) {
-
-        e.preventDefault();
-
-        customCheerAudio.play(); // audio will load and then play
-        runEffect2(); // play effect 2 custom cheer
-
-    };
-
-    function playHolyShitAudio(e) {
-
-        e.preventDefault();
-
-        holyShitAudio.play(); // audio will load and then play
-
-    };
 
     button.click(playAudio);
     customCheerButton.click(playCustomCheerAudio);
@@ -200,12 +220,18 @@ function init() {
 
     // Init mixer
     mixer();
+
     // Init Color selector
     keyPicker();
+
     // Init Beat That Toadboy!
     beatThatToadboy();
+
     // Init MTSC Scoreboard
     mtscScoreboard();
+
+    // Init Where's That Toadboy?
+    wheresThatToadboy();
 
 }
 

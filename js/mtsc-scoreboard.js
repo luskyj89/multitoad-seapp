@@ -61,6 +61,10 @@ function mtscScoreboard() {
             if ( bttSwitch.hasClass("btt-on") ) {
                 bttSwitch.trigger("click");
             }
+
+            if ( wttSwitch.hasClass("wtt-on") ) {
+                wttSwitch.trigger("click");
+            }
         }
 
     });

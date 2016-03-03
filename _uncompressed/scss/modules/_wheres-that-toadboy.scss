@@ -1,5 +1,6 @@
 
 #wtt-frame {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -11,6 +12,18 @@
     z-index: 10;
 }
 
+.wtt-title {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+    width: 668px;
+    height: 564px;
+    background: url(../images/wheres-that-toadboy/wtt-title.png) no-repeat;
+    background-size: 100%;
+    z-index: 50;
+}
+
 #wtt-bg {
     position: absolute;
     top: 0;
@@ -20,13 +33,13 @@
     background: $black url(../images/wheres-that-toadboy/bg.png) no-repeat;
     z-index: 15;
     animation-name: light-flasher;
-    animation-duration: 4s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
 @keyframes light-flasher {
-    0%   { opacity: .3; }
+    0%   { opacity: .5; }
     100%  { opacity: 1; }
 }
 
@@ -54,6 +67,8 @@
     background: -webkit-linear-gradient(top,  $black 0%,#003f4c 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  $black 0%,#003f4c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#003f4c',GradientType=0 ); /* IE6-9 */
+    background-position: center;
+    background-size: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     z-index: 20;
@@ -70,6 +85,10 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     z-index: 30;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .door-1 {

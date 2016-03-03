@@ -33,6 +33,10 @@
             <source src="audio/holy-shit.m4a" type="audio/mpeg" />
         </audio>
 
+        <audio id="game-show-audio">
+            <source src="audio/game-show-intro.m4a" type="audio/mpeg" />
+        </audio>
+
         <section id="main-view">
 
             <section id="top">
@@ -70,18 +74,20 @@
 
             <section id="wtt-frame">
 
+                <figure class="wtt-title"></figure>
+
                 <div class="door-frame">
-                    <div class="door-opening"></div>
+                    <div class="door-opening opening-1"></div>
                     <div class="door door-1"></div>
                 </div>
 
                 <div class="door-frame">
-                    <div class="door-opening"></div>
+                    <div class="door-opening opening-2"></div>
                     <div class="door door-2"></div>
                 </div>
 
                 <div class="door-frame">
-                    <div class="door-opening"></div>
+                    <div class="door-opening opening-3"></div>
                     <div class="door door-3"></div>
                 </div>
 
@@ -162,9 +168,47 @@
 
             </div>
 
+            <div id="wtt-controls">
+
+                <label>GIF 1
+                    <select id="gif1">
+                        <option value="images/wheres-that-toadboy/dancing-squidward.gif">Squidward</option>
+                        <option value="images/wheres-that-toadboy/heres-johnny.gif">Here's Johnny!</option>
+                        <option value="images/wheres-that-toadboy/yablewit.jpg">Ya blew it.</option>
+                        <option value="images/wheres-that-toadboy/oh-boy.gif">Oh boy...</option>
+                        <option value="images/wheres-that-toadboy/vince.gif">Vince</option>
+                    </select>
+                </label>
+                <label>GIF 2
+                    <select id="gif2">
+                        <option value="images/wheres-that-toadboy/dancing-squidward.gif">Squidward</option>
+                        <option value="images/wheres-that-toadboy/heres-johnny.gif">Here's Johnny!</option>
+                        <option value="images/wheres-that-toadboy/yablewit.jpg">Ya blew it.</option>
+                        <option value="images/wheres-that-toadboy/oh-boy.gif">Oh boy...</option>
+                        <option value="images/wheres-that-toadboy/vince.gif">Vince</option>
+                    </select>
+                </label>
+                <label>GIF 3
+                    <select id="gif3">
+                        <option value="images/wheres-that-toadboy/dancing-squidward.gif">Squidward</option>
+                        <option value="images/wheres-that-toadboy/heres-johnny.gif">Here's Johnny!</option>
+                        <option value="images/wheres-that-toadboy/yablewit.jpg">Ya blew it.</option>
+                        <option value="images/wheres-that-toadboy/oh-boy.gif">Oh boy...</option>
+                        <option value="images/wheres-that-toadboy/vince.gif">Vince</option>
+                    </select>
+                </label>
+
+                <div class="small button-group">
+                    <a href="#" id="play-wtt" class="button">Hide Toadboy</a>
+                    <a href="#" id="reset-wtt" class="button">Close Doors</a>
+                    <a href="#" id="show-title" class="button">Show Title</a>
+                </div>
+
+            </div>
+
             <div id="mixer">
 
-                <div id="master-vol-slider" class="slider vertical" data-slider data-initial-start="25" data-end="100" data-vertical="true">
+                <div id="master-vol-slider" class="slider vertical" data-slider data-initial-start="35" data-end="100" data-vertical="true">
                   <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
                   <span class="slider-fill" data-slider-fill></span>
                   <input type="hidden">
@@ -187,6 +231,7 @@
 
                 <div class="switch-wrap">
                     <div class="switch">
+                        <span class="switch-title">&nbsp;</span>
                         <input class="switch-input" id="bttSwitch" type="checkbox" name="bttSwitch">
                         <label class="switch-paddle" for="bttSwitch">
                             <span class="show-for-sr">Activate Beat That Toadboy</span>
@@ -198,6 +243,14 @@
                         <input class="switch-input" id="scoreSwitch" type="checkbox" name="scoreSwitch">
                         <label class="switch-paddle" for="scoreSwitch">
                             <span class="show-for-sr">Activate Scoreboard Controls</span>
+                        </label>
+                    </div>
+
+                    <div class="switch">
+                        <span class="switch-title">WTT</span>
+                        <input class="switch-input" id="wttSwitch" type="checkbox" name="wttSwitch">
+                        <label class="switch-paddle" for="wttSwitch">
+                            <span class="show-for-sr">Activate Where's That Toadboy</span>
                         </label>
                     </div>
                 </div>
@@ -217,6 +270,7 @@
         <script src="js/plugins.js"></script>
         <script src="js/beat-that-toadboy.js"></script>
         <script src="js/mtsc-scoreboard.js"></script>
+        <script src="js/wheres-that-toadboy.js"></script>
         <script src="js/app.min.js"></script>
 
     </body>
