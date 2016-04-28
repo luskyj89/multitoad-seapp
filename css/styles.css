@@ -515,7 +515,7 @@ a {
   display: block;
   width: 1280px;
   height: 720px;
-  margin: 20px auto 0;
+  margin: 0px auto 0;
   background-color: #1c1d1e;
   border: 5px dotted #22d7fd;
   overflow: hidden;
