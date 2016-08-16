@@ -66,6 +66,10 @@ function wheresThatToadboy() {
             if ( scoreSwitch.hasClass("score-on") ) {
                 scoreSwitch.trigger("click");
             }
+
+            if ( giveawaySwitch.hasClass("giveaway-on") ) {
+                giveawaySwitch.trigger("click");
+            }
         }
 
     });
@@ -125,8 +129,8 @@ function wheresThatToadboy() {
     showTitle.click(function(e) {
         e.preventDefault();
 
-        toadTitle.delay(3500).fadeIn(function() {
-            toadTitle.delay(5500).fadeOut();
+        toadTitle.fadeIn(function() {
+            toadTitle.delay(6000).fadeOut();
         })
 
         gameShowAudio.play();

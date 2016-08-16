@@ -1,9 +1,7 @@
-<?php require('inc/header.php'); ?>
-
 <section id="controls">
 
     <div id="effect-fire">
-        <h1>Multitoad SEAPP&trade; Alpha &ndash; v1.4.0</h1>
+        <h1>Multitoad SEAPP&trade; Alpha &ndash; v1.5.0</h1>
 
         <a id="button" class="effect-btn first" href="#">Dunked</a>
         <a id="custom-cheer-button" class="effect-btn" href="#">Custom Cheer</a> <br/>
@@ -129,6 +127,28 @@
 
     </div>
 
+    <div id="giveaway-controls">
+
+        <label>
+            <input id="game1" type="text" name="game1" value="Game 1 Image URL" />
+        </label>
+
+        <label>
+            <input id="game2" type="text" name="game2" value="Game 2 Image URL" />
+        </label>
+
+        <label>
+            <input id="game3" type="text" name="game3" value="Game 3 Image URL" />
+        </label>
+
+        <div class="small button-group">
+            <a href="#" id="set-games" class="button">Set Games</a>
+        </div>
+
+        <p>Leave input field blank to a remove game or only show 1 or 2 titles.</p>
+
+    </div>
+
     <div id="mixer">
 
         <div id="master-vol-slider" class="slider vertical" data-slider data-initial-start="35" data-end="100" data-vertical="true">
@@ -176,10 +196,16 @@
                     <span class="show-for-sr">Activate Where's That Toadboy</span>
                 </label>
             </div>
+
+            <div class="switch">
+                <span class="switch-title">Giveaway</span>
+                <input class="switch-input" id="giveawaySwitch" type="checkbox" name="giveawaySwitch">
+                <label class="switch-paddle" for="giveawaySwitch">
+                    <span class="show-for-sr">Activate Giveaway Display</span>
+                </label>
+            </div>
         </div>
 
     </div>
 
 </section>
-
-<?php require('inc/footer.php'); ?>

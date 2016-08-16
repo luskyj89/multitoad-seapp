@@ -1,0 +1,51 @@
+#giveaways {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1280px;
+    height: 720px;
+    background: url(../images/giveaways/bg-giveaways-darkermid.jpg) no-repeat;
+    background-size: cover;
+    z-index: 30;
+}
+
+#giveaway-lights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1280px;
+    height: 720px;
+    background: $black url(../images/giveaways/bg-giveaways-darker.jpg) no-repeat;
+    z-index: 15;
+    animation-name: giveawaylights;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes giveawaylights {
+    0%   { opacity: .2; }
+    100%  { opacity: 1; }
+}
+
+#game-1, #game-2, #game-3 {
+    position: absolute;
+    bottom: 130px;
+    left: 290px;
+    width: 205px;
+    height: 291px;
+    background-size: cover;
+    background-position: center;
+    z-index: 20;
+}
+
+#game-2 {
+    bottom: 130px;
+    left: 550px;
+}
+
+#game-3 {
+    bottom: 130px;
+    left: 810px;
+}

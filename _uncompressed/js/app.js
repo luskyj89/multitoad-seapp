@@ -6,6 +6,7 @@ customCheerButton, customCheerAudio;
 
 var controls            = $("#controls");
 var mainView            = $("#main-view");
+var openControls        = $("#open-controls");
 
 // Effect Specific
 var effect1             = $("#effect-1");
@@ -159,6 +160,10 @@ function beatThatToadboy() {
                 wttSwitch.trigger("click");
             }
 
+            if ( giveawaySwitch.hasClass("giveaway-on") ) {
+                giveawaySwitch.trigger("click");
+            }
+
             gameShowAudio.play();
         }
 
@@ -218,6 +223,10 @@ function init() {
     customCheerButton.click(playCustomCheerAudio);
     holyShitButton.click(playHolyShitAudio);
 
+    openControls.click(function() {
+        window.open("controls.php", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+    });
+
     // Init mixer
     mixer();
 
@@ -232,6 +241,9 @@ function init() {
 
     // Init Where's That Toadboy?
     wheresThatToadboy();
+
+    // Init Giveaway Display
+    giveawayDisplay();
 
 }
 

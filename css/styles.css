@@ -8,13 +8,26 @@
 /**
  * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
   display: block; }
 
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-audio, canvas, video {
+audio,
+canvas,
+video {
   display: inline-block;
   *display: inline;
   *zoom: 1; }
@@ -55,7 +68,11 @@ html {
  * Address `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-html, button, input, select, textarea {
+html,
+button,
+input,
+select,
+textarea {
   font-family: sans-serif; }
 
 /**
@@ -76,7 +93,8 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-a:active, a:hover {
+a:active,
+a:hover {
   outline: 0; }
 
 /* ==========================================================================
@@ -120,7 +138,8 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
  */
-b, strong {
+b,
+strong {
   font-weight: bold; }
 
 blockquote {
@@ -150,13 +169,17 @@ mark {
 /**
  * Address margins set differently in IE 6/7.
  */
-p, pre {
+p,
+pre {
   margin: 1em 0; }
 
 /**
  * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
  */
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family: monospace, serif;
   _font-family: 'courier new', monospace;
   font-size: 1em; }
@@ -178,7 +201,8 @@ q {
 /**
  * Address `quotes` property not supported in Safari 4.
  */
-q:before, q:after {
+q:before,
+q:after {
   content: '';
   content: none; }
 
@@ -191,7 +215,8 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -209,7 +234,10 @@ sub {
 /**
  * Address margins set differently in IE 6/7.
  */
-dl, menu, ol, ul {
+dl,
+menu,
+ol,
+ul {
   margin: 1em 0; }
 
 dd {
@@ -218,13 +246,16 @@ dd {
 /**
  * Address paddings set differently in IE 6/7.
  */
-menu, ol, ul {
+menu,
+ol,
+ul {
   padding: 0 0 0 40px; }
 
 /**
  * Correct list images handled incorrectly in IE 7.
  */
-nav ul, nav ol {
+nav ul,
+nav ol {
   list-style: none;
   list-style-image: none; }
 
@@ -293,7 +324,10 @@ legend {
  *    and Chrome.
  * 3. Improve appearance and consistency in all browsers.
  */
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-size: 100%;
   /* 1 */
   margin: 0;
@@ -307,7 +341,8 @@ button, input, select, textarea {
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-button, input {
+button,
+input {
   line-height: normal; }
 
 /**
@@ -316,7 +351,8 @@ button, input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-button, select {
+button,
+select {
   text-transform: none; }
 
 /**
@@ -328,7 +364,10 @@ button, select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
@@ -339,7 +378,8 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-button[disabled], html input[disabled] {
+button[disabled],
+html input[disabled] {
   cursor: default; }
 
 /**
@@ -348,7 +388,8 @@ button[disabled], html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -373,13 +414,15 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 /**
  * Remove inner padding and border in Firefox 3+.
  */
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
@@ -403,7 +446,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-html, button, input, select, textarea {
+html,
+button,
+input,
+select,
+textarea {
   color: #222; }
 
 html {
@@ -426,7 +473,10 @@ hr {
   margin: 1em 0;
   padding: 0; }
 
-audio, canvas, img, video {
+audio,
+canvas,
+img,
+video {
   vertical-align: middle; }
 
 fieldset {
@@ -469,7 +519,8 @@ textarea {
   position: absolute;
   width: 1px; }
 
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -480,7 +531,8 @@ textarea {
 .invisible {
   visibility: hidden; }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: " ";
   display: table; }
 
@@ -499,7 +551,7 @@ body {
   color: #ffffff; }
 
 h1, h2 {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   color: #00fa87; }
 
@@ -511,28 +563,34 @@ a {
     outline: none; }
 
 #main-view {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 50%;
   display: block;
   width: 1280px;
   height: 720px;
-  margin: 0px auto 0;
+  margin-left: -640px;
   background-color: #1c1d1e;
   border: 5px dotted #22d7fd;
   overflow: hidden;
-  transition: all .4s ease-out; }
+  transition: all .4s ease-out;
+  z-index: 100; }
 
 #controls {
   display: block;
-  position: relative;
+  position: absolute;
+  top: 740px;
+  left: 50%;
   box-sizing: border-box;
   width: 1280px;
   height: 207px;
-  margin: 20px auto 0;
+  margin-left: -640px;
   padding: 15px;
   background: rgba(53, 53, 53, 0.48);
   border: 5px solid rgba(93, 93, 93, 0.35);
   border-radius: 10px;
-  transition: all 1.5s ease-out; }
+  transition: all 1.5s ease-out;
+  z-index: 10; }
   #controls h1 {
     margin-top: 0;
     font-size: 20px;
@@ -580,9 +638,8 @@ a {
   top: 81px;
   left: -5px;
   width: 130px;
-  -webkit-transform: rotateZ(90deg);
-          transform: rotateZ(90deg);
-  font-family: 'Oswald', sans-serif;
+  transform: rotateZ(90deg);
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 4px;
@@ -601,8 +658,11 @@ a {
 
 footer {
   display: block;
+  position: absolute;
+  top: 970px;
+  left: 50%;
   width: 1280px;
-  margin: 20px auto;
+  margin-left: -640px;
   font-size: 12px; }
 
 .effect-btn {
@@ -610,7 +670,7 @@ footer {
   padding: 8px 20px;
   margin: 5px;
   background: rgba(0, 0, 0, 0.29);
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-style: italic;
@@ -670,7 +730,7 @@ footer {
   padding: 10px 90px 0px;
   margin-left: -450px;
   background: #151515;
-  font-family: 'Outage', sans-serif;
+  font-family: "Outage", sans-serif;
   font-weight: normal;
   font-size: 65px;
   color: #00fa87;
@@ -682,23 +742,10 @@ footer {
   -webkit-animation-direction: alternate;
   -webkit-animation-iteration-count: infinite; }
 
-@-webkit-keyframes shift {
-  0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg); }
-
-  50% {
-    -webkit-transform: rotateZ(3deg);
-            transform: rotateZ(3deg); }
-
-  100% {
-    -webkit-transform: rotateZ(-3deg);
-            transform: rotateZ(-3deg); } }
-
 #top {
   display: none; }
 
-#btt-controls, #scoreboard-controls, #wtt-controls {
+#btt-controls, #scoreboard-controls, #wtt-controls, #giveaway-controls {
   display: none;
   position: absolute;
   top: 15px;
@@ -708,7 +755,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.45);
   padding: 20px;
   overflow-y: auto; }
-  #btt-controls label, #scoreboard-controls label, #wtt-controls label {
+  #btt-controls label, #scoreboard-controls label, #wtt-controls label, #giveaway-controls label {
     color: #ffffff; }
 
 .switch-wrap {
@@ -760,7 +807,7 @@ input:checked ~ .switch-paddle {
   height: 720px;
   z-index: 10;
   overflow: hidden;
-  font-family: 'Oswald', sans-serif; }
+  font-family: "Oswald", sans-serif; }
 
 #left-player, #right-player {
   position: absolute;
@@ -871,26 +918,14 @@ input:checked ~ .switch-paddle {
   height: 720px;
   background: #000000 url(../images/wheres-that-toadboy/bg.png) no-repeat;
   z-index: 15;
-  -webkit-animation-name: light-flasher;
-          animation-name: light-flasher;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate; }
-
-@-webkit-keyframes light-flasher {
-  0% {
-    opacity: .5; }
-
-  100% {
-    opacity: 1; } }
+  animation-name: light-flasher;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
 
 @keyframes light-flasher {
   0% {
     opacity: .5; }
-
   100% {
     opacity: 1; } }
 
@@ -949,3 +984,51 @@ input:checked ~ .switch-paddle {
 .door-3 {
   background: #000000 url(../images/wheres-that-toadboy/door-3.png) no-repeat;
   background-position: center; }
+
+#giveaways {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 720px;
+  background: url(../images/giveaways/bg-giveaways-darkermid.jpg) no-repeat;
+  background-size: cover;
+  z-index: 30; }
+
+#giveaway-lights {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 720px;
+  background: #000000 url(../images/giveaways/bg-giveaways-darker.jpg) no-repeat;
+  z-index: 15;
+  animation-name: giveawaylights;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
+
+@keyframes giveawaylights {
+  0% {
+    opacity: .2; }
+  100% {
+    opacity: 1; } }
+
+#game-1, #game-2, #game-3 {
+  position: absolute;
+  bottom: 130px;
+  left: 290px;
+  width: 205px;
+  height: 291px;
+  background-size: cover;
+  background-position: center;
+  z-index: 20; }
+
+#game-2 {
+  bottom: 130px;
+  left: 550px; }
+
+#game-3 {
+  bottom: 130px;
+  left: 810px; }
