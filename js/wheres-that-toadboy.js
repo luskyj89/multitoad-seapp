@@ -132,8 +132,6 @@ function wheresThatToadboy() {
         toadTitle.fadeIn(function() {
             toadTitle.delay(6000).fadeOut();
         })
-
-        gameShowAudio.play();
     });
 
     door1.click(function(e) {

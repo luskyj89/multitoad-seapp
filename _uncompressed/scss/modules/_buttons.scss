@@ -16,7 +16,7 @@
     }
 
     &:focus {
-        color: $blue;
+        color: $white;
     }
 
     &.first {
@@ -30,6 +30,26 @@
 
     &:hover {
         color: $green;
+        border-left: 10px solid $white;
+    }
+
+    &.playing {
+        animation-name: playingblink;
+        animation-duration: .4s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes playingblink {
+    0% {
+        border-left: 10px solid $white;
+    }
+
+    50% {
+        border-left: 10px solid red;
+    }
+
+    100% {
         border-left: 10px solid $white;
     }
 }

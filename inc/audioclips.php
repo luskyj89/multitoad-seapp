@@ -6,10 +6,10 @@
     <source src="audio/crowd-cheer.m4a" type="audio/mpeg" />
 </audio>
 
-<audio id="holy-shit-audio">
-    <source src="audio/holy-shit.m4a" type="audio/mpeg" />
+<audio id="gameshow-audio" loop>
+    <source src="audio/toadboygameshowmusic.mp3" type="audio/mpeg" />
 </audio>
 
-<audio id="game-show-audio">
-    <source src="audio/game-show-intro.mp3" type="audio/mpeg" />
+<audio id="time-clock-audio" loop>
+    <source src="audio/timeclock-music.mp3" type="audio/mpeg" />
 </audio>

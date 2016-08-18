@@ -1,12 +1,13 @@
 <section id="controls">
 
     <div id="effect-fire">
-        <h1>Multitoad SEAPP&trade; Alpha &ndash; v1.5.0</h1>
+        <h1>Multitoad SEAPP&trade; Alpha &ndash; v1.5.1</h1>
 
         <a id="button" class="effect-btn first" href="#">Dunked</a>
         <a id="custom-cheer-button" class="effect-btn" href="#">Custom Cheer</a> <br/>
 
-        <a id="holy-shit-button" class="effect-btn sound-btn first" href="#">Holy Shit</a>
+        <a id="gameshow-button" class="effect-btn sound-btn first" href="#">Gameshow Music</a>
+        <a id="time-clock-button" class="effect-btn sound-btn first" href="#">Time Clock Music</a>
 
     </div>
 
@@ -130,15 +131,15 @@
     <div id="giveaway-controls">
 
         <label>
-            <input id="game1" type="text" name="game1" value="Game 1 Image URL" />
+            <input id="game1" type="text" name="game1" placeholder="Game 1 Image URL" />
         </label>
 
         <label>
-            <input id="game2" type="text" name="game2" value="Game 2 Image URL" />
+            <input id="game2" type="text" name="game2" placeholder="Game 2 Image URL" />
         </label>
 
         <label>
-            <input id="game3" type="text" name="game3" value="Game 3 Image URL" />
+            <input id="game3" type="text" name="game3" placeholder="Game 3 Image URL" />
         </label>
 
         <div class="small button-group">

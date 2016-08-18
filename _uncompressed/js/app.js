@@ -29,9 +29,10 @@ var button              = $("#button");
 var customCheerButton   = $("#custom-cheer-button");
 var audio               = document.getElementById('audio');
 var customCheerAudio    = document.getElementById('custom-cheer-audio');
-var holyShitAudio       = document.getElementById('holy-shit-audio');
-var gameShowAudio       = document.getElementById('game-show-audio');
-var holyShitButton      = $("#holy-shit-button");
+var gameshowAudio       = document.getElementById('gameshow-audio');
+var timeClockAudio      = document.getElementById('time-clock-audio');
+var gameshowButton      = $("#gameshow-button");
+var timeClockButton     = $("#time-clock-button");
 
 // Query string variable to find url settings
 var queryString         = window.location.search;
@@ -97,8 +98,8 @@ function mixer() {
         // Adjust volume based on new slider position
         audio.volume = currentVolume;
         customCheerAudio.volume = currentVolume;
-        holyShitAudio.volume = currentVolume;
-        gameShowAudio.volume = currentVolume;
+        gameshowAudio.volume = currentVolume;
+        timeClockAudio.volume = currentVolume;
 
         // Set our volume display
         currentVolumeLabel.html("Volume: " + Math.round(currentVolume * 100) + "%");
@@ -163,8 +164,6 @@ function beatThatToadboy() {
             if ( giveawaySwitch.hasClass("giveaway-on") ) {
                 giveawaySwitch.trigger("click");
             }
-
-            gameShowAudio.play();
         }
 
     });
@@ -197,19 +196,17 @@ function playCustomCheerAudio(e) {
 
 };
 
-function playHolyShitAudio(e) {
+function playGameshowAudio() {
 
-    e.preventDefault();
-
-    holyShitAudio.play(); // audio will load and then play
+    gameshowAudio.load(); // audio will load and then play
+    gameshowAudio.play();
 
 };
 
-function playGameShowAudio(e) {
+function playTimeClockAudio() {
 
-    e.preventDefault();
-
-    gameShowAudio.play(); // audio will load and then play
+    timeClockAudio.load(); // audio will load and then play
+    timeClockAudio.play();
 
 };
 
@@ -220,8 +217,34 @@ function playGameShowAudio(e) {
 function init() {
 
     button.click(playAudio);
+
     customCheerButton.click(playCustomCheerAudio);
-    holyShitButton.click(playHolyShitAudio);
+
+    gameshowButton.click(function(e) {
+        e.preventDefault();
+
+        if ( gameshowButton.hasClass("playing") ) {
+            gameshowButton.removeClass("playing");
+            gameshowAudio.pause();
+        } else {
+            gameshowButton.addClass("playing");
+            playGameshowAudio();
+        }
+
+    });
+
+    timeClockButton.click(function(e) {
+        e.preventDefault();
+
+        if ( timeClockButton.hasClass("playing") ) {
+            timeClockButton.removeClass("playing");
+            timeClockAudio.pause();
+        } else {
+            timeClockButton.addClass("playing");
+            playTimeClockAudio();
+        }
+
+    });
 
     openControls.click(function() {
         window.open("controls.php", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
