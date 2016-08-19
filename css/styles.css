@@ -542,6 +542,59 @@ textarea {
 .clearfix {
   *zoom: 1; }
 
+@font-face {
+  font-family: 'icons';
+  src: url("../fonts/icons.eot?fv03pw");
+  src: url("../fonts/icons.eot?fv03pw#iefix") format("embedded-opentype"), url("../fonts/icons.ttf?fv03pw") format("truetype"), url("../fonts/icons.woff?fv03pw") format("woff"), url("../fonts/icons.svg?fv03pw#icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-image:before {
+  content: "\70"; }
+
+.icon-bullhorn:before {
+  content: "\76"; }
+
+.icon-wrench:before {
+  content: "\77"; }
+
+.icon-menu:before {
+  content: "\6d"; }
+
+.icon-question:before {
+  content: "\71"; }
+
+.icon-cross:before {
+  content: "\78"; }
+
+.icon-facebook:before {
+  content: "\66"; }
+
+.icon-instagram:before {
+  content: "\69"; }
+
+.icon-twitter:before {
+  content: "\74"; }
+
+.icon-twitch:before {
+  content: "\62"; }
+
+.icon-steam2:before {
+  content: "\73"; }
+
 body {
   -webkit-font-smoothing: antialiased;
   background: #151515;
@@ -571,6 +624,7 @@ a {
   height: 720px;
   margin-left: -640px;
   background-color: #1c1d1e;
+  background-size: cover;
   border: 5px dotted #22d7fd;
   overflow: hidden;
   transition: all .4s ease-out;
@@ -583,16 +637,16 @@ a {
   left: 50%;
   box-sizing: border-box;
   width: 1280px;
-  height: 207px;
+  height: 197px;
   margin-left: -640px;
-  padding: 15px;
+  padding: 10px 15px;
   background: rgba(53, 53, 53, 0.48);
   border: 5px solid rgba(93, 93, 93, 0.35);
   border-radius: 10px;
   transition: all 1.5s ease-out;
   z-index: 10; }
   #controls h1 {
-    margin-top: 0;
+    margin-top: 10px;
     font-size: 20px;
     font-style: italic;
     text-transform: uppercase; }
@@ -604,11 +658,11 @@ a {
   width: 50%; }
 
 #mixer {
-  display: block;
   position: relative;
+  display: block;
   box-sizing: border-box;
-  float: left;
-  width: 50%;
+  float: right;
+  width: 20%;
   padding: 18px 5px;
   background: rgba(0, 0, 0, 0.29); }
 
@@ -648,22 +702,13 @@ a {
 .mixer-input {
   display: block;
   float: left;
-  margin-left: 30px;
+  margin-right: 10px;
   margin-bottom: 5px;
   color: #ffffff; }
 
 #custom-text {
   width: 163px;
   margin-bottom: 0; }
-
-footer {
-  display: block;
-  position: absolute;
-  top: 970px;
-  left: 50%;
-  width: 1280px;
-  margin-left: -640px;
-  font-size: 12px; }
 
 .effect-btn {
   display: inline-block;
@@ -710,6 +755,45 @@ footer {
 
 .button-group .button:not(:last-child) {
   border-right: 1px solid #151515; }
+
+.settings-icon {
+  margin-right: 10px;
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 20px;
+  text-transform: none;
+  line-height: 1;
+  color: #ffffff; }
+  .settings-icon:focus {
+    color: #ffffff; }
+  .settings-icon:hover {
+    color: #22d7fd; }
+
+.control-modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 78%;
+  height: 190px;
+  padding: 10px 10px 10px 40px;
+  background: #373737; }
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  left: 8px; }
+
+#help-modal {
+  padding-left: 40px; }
+  #help-modal p {
+    font-size: 12px; }
+
+#background-settings-modal .wrap {
+  width: 380px; }
 
 #effect-1 {
   position: absolute;
@@ -761,7 +845,7 @@ footer {
   display: none;
   position: absolute;
   top: 15px;
-  right: 635px;
+  right: 263px;
   width: 300px;
   height: 168px;
   background-color: rgba(0, 0, 0, 0.45);

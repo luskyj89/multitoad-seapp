@@ -32,7 +32,7 @@ run.click(function(e) {
 
         if ( playerPick === "Scissors") {
             // Player Loses
-            toadboy.css("background-image", "url(images/toadboy-won.png)");
+            $("#toadboy").css("background-image", "url(images/toadboy-won.png)");
             bubbleText.html(user + "<br/>Loses!");
             player.css("background-image", "url(images/pl-scissors.png)");
         }
@@ -64,7 +64,7 @@ run.click(function(e) {
 
         if ( playerPick === "Rock") {
             // Player loses
-            toadboy.css("background-image", "url(images/toadboy-won.png)");
+            $("#toadboy").css("background-image", "url(images/toadboy-won.png)");
             bubbleText.html(user + "<br/>Loses!");
             player.css("background-image", "url(images/pl-rock.png)");
         }
@@ -76,7 +76,7 @@ run.click(function(e) {
 
         if ( playerPick === "Paper") {
             // Player Loses
-            toadboy.css("background-image", "url(images/toadboy-won.png)");
+            $("#toadboy").css("background-image", "url(images/toadboy-won.png)");
             bubbleText.html(user + "<br/>Loses!");
             player.css("background-image", "url(images/pl-paper.png)");
         }

@@ -8,6 +8,16 @@ var controls            = $("#controls");
 var mainView            = $("#main-view");
 var openControls        = $("#open-controls");
 
+// Settings
+var closeButton         = $(".close-button");
+var advancedButton      = $("#advanced-button");
+var backgroundButton    = $("#background-button");
+var helpButton          = $("#help-button");
+var advancedModal       = $("#advanced-settings-modal");
+var backgroundModal     = $("#background-settings-modal");
+var helpModal           = $("#help-modal");
+var updateSettings      = $("#update-settings");
+
 // Effect Specific
 var effect1             = $("#effect-1");
 var effect1Title        = $("#effect-1-title");
@@ -133,6 +143,23 @@ function keyPicker() {
 }
 
 /* ----------------------------------------
+   Background Settings
+--------------------------------------- */
+
+function backgroundSettings() {
+
+    updateSettings.click(function(e) {
+        e.preventDefault();
+
+        var backgroundInput = $("#background-url").val();
+
+        mainView.css("background-image", "url(" + backgroundInput + ")");
+
+    });
+
+}
+
+/* ----------------------------------------
    SEAPP Specific Beat That Toadboy
 --------------------------------------- */
 
@@ -250,11 +277,40 @@ function init() {
         window.open("controls.php", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
     });
 
+    // Settings Modals
+    advancedButton.click(function(e) {
+        e.preventDefault();
+
+        advancedModal.fadeIn();
+    });
+
+    backgroundButton.click(function(e) {
+        e.preventDefault();
+
+        backgroundModal.fadeIn();
+    });
+
+    helpButton.click(function(e) {
+        e.preventDefault();
+
+        helpModal.fadeIn();
+    });
+
+    closeButton.click(function(e) {
+        e.preventDefault();
+
+        $(".control-modal").fadeOut();
+    });
+
+
     // Init mixer
     mixer();
 
     // Init Color selector
     keyPicker();
+
+    // Init Background Settings
+    backgroundSettings();
 
     // Init Beat That Toadboy!
     beatThatToadboy();

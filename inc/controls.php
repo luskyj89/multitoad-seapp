@@ -1,13 +1,20 @@
 <section id="controls">
 
     <div id="effect-fire">
-        <h1>Multitoad SEAPP&trade; Alpha &ndash; v1.5.1</h1>
+
+        <div class="settings-wrap">
+            <a href="#" id="advanced-button" class="settings-icon" title="Settings">w</a>
+            <a href="#" id="background-button" class="settings-icon" title="Background">p</a>
+            <a href="#" id="help-button" class="settings-icon" title="Help">q</a>
+        </div>
 
         <a id="button" class="effect-btn first" href="#">Dunked</a>
         <a id="custom-cheer-button" class="effect-btn" href="#">Custom Cheer</a> <br/>
 
         <a id="gameshow-button" class="effect-btn sound-btn first" href="#">Gameshow Music</a>
         <a id="time-clock-button" class="effect-btn sound-btn first" href="#">Time Clock Music</a>
+
+        <h1>StreamBoy&trade; Alpha &ndash; v1.5.1</h1>
 
     </div>
 
@@ -21,7 +28,7 @@
         </select>
 
         <label>
-            <input id="username" type="text" name="username" value="Username" />
+            <input id="username" type="text" name="username" placeholder="Username" />
         </label>
 
         <div class="small button-group">
@@ -160,19 +167,6 @@
 
         <span class="current-volume">Volume: 50%</span>
 
-        <label class="mixer-input">Key Color
-          <select id="color-key">
-            <option value="notselected">Not Selected</option>
-            <option value="purple">Purple</option>
-            <option value="red">Red</option>
-            <option value="orange">Orange</option>
-          </select>
-        </label>
-
-        <label id="custom-text-label" class="mixer-input">Custom Text
-            <input id="custom-text" type="text" placeholder="(Optional)">
-        </label>
-
         <div class="switch-wrap">
             <div class="switch">
                 <span class="switch-title">&nbsp;</span>
@@ -208,5 +202,48 @@
         </div>
 
     </div>
+
+    <div id="advanced-settings-modal" class="control-modal">
+
+        <label id="custom-text-label" class="mixer-input">Custom Text
+            <input id="custom-text" type="text" placeholder="(Optional)">
+        </label>
+
+        <a href="#" class="settings-icon close-button" title="Close">x</a>
+    </div>
+
+    <div id="background-settings-modal" class="control-modal">
+        <div class="wrap">
+            <label class="mixer-input">Key Color
+              <select id="color-key">
+                <option value="notselected">Not Selected</option>
+                <option value="purple">Purple</option>
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+              </select>
+            </label>
+
+            <label id="background-img-label" class="mixer-input">Background Image
+                <input id="background-url" type="text" placeholder="Image URL">
+            </label>
+
+            <div class="small button-group">
+                <a href="#" id="update-settings" class="button">Update Settings</a>
+            </div>
+        </div>
+        
+        <a href="#" class="settings-icon close-button" title="Close">x</a>
+    </div>
+
+    <div id="help-modal" class="control-modal">
+        <h1>FIGURE IT OUT YOURSELF DINGUS</h1>
+
+        <p>(Documentation Coming soon)</p>
+
+        <p>&copy; 2016 <a href="http://multitoad.com" target="_blank">Multitoad.com</a> | Created by <a href="http://johnlusky.com" target="_blank">John Lusky</a> | All Rights Reserved</p>
+
+        <a href="#" class="settings-icon close-button" title="Close">x</a>
+    </div>
+
 
 </section>
