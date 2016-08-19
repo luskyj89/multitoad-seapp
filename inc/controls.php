@@ -14,7 +14,7 @@
         <a id="gameshow-button" class="effect-btn sound-btn first" href="#">Gameshow Music</a>
         <a id="time-clock-button" class="effect-btn sound-btn first" href="#">Time Clock Music</a>
 
-        <h1>StreamBoy&trade; Alpha &ndash; v1.5.1</h1>
+        <h1>StreamBoy&trade; Alpha &ndash; v1.6.0</h1>
 
     </div>
 
@@ -231,7 +231,7 @@
                 <a href="#" id="update-settings" class="button">Update Settings</a>
             </div>
         </div>
-        
+
         <a href="#" class="settings-icon close-button" title="Close">x</a>
     </div>
 
