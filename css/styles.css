@@ -616,13 +616,14 @@ a {
     outline: none; }
 
 #main-view {
+  box-sizing: content-box;
   position: fixed;
   top: 0;
   left: 50%;
   display: block;
   width: 1280px;
   height: 720px;
-  margin-left: -640px;
+  margin-left: -645px;
   background-color: #1c1d1e;
   background-size: cover;
   border: 5px dotted #22d7fd;
@@ -636,9 +637,9 @@ a {
   top: 740px;
   left: 50%;
   box-sizing: border-box;
-  width: 1280px;
+  width: 1290px;
   height: 197px;
-  margin-left: -640px;
+  margin-left: -645px;
   padding: 10px 15px;
   background: rgba(53, 53, 53, 0.48);
   border: 5px solid rgba(93, 93, 93, 0.35);
@@ -662,7 +663,7 @@ a {
   display: block;
   box-sizing: border-box;
   float: right;
-  width: 20%;
+  width: 25%;
   padding: 18px 5px;
   background: rgba(0, 0, 0, 0.29); }
 
@@ -777,10 +778,11 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  width: 78%;
-  height: 190px;
+  width: 100%;
+  height: 187px;
   padding: 10px 10px 10px 40px;
-  background: #373737; }
+  background: rgba(14, 14, 14, 0.95);
+  z-index: 999; }
 
 .close-button {
   position: absolute;
@@ -818,13 +820,14 @@ a {
   z-index: 10; }
 
 #custom-cheer-text {
+  box-sizing: border-box;
   display: block;
   position: absolute;
   top: -300px;
   left: 50%;
-  width: 900px;
+  width: 1050px;
   padding: 10px 90px 0px;
-  margin-left: -450px;
+  margin-left: -525px;
   background: #151515;
   font-family: "Outage", sans-serif;
   font-weight: normal;
@@ -833,32 +836,40 @@ a {
   text-align: center;
   text-shadow: 2px 2px #000000;
   border: 13px solid #00fa87;
-  -webkit-animation: shift .1s linear;
-  -webkit-animation-delay: 0s;
-  -webkit-animation-direction: alternate;
-  -webkit-animation-iteration-count: infinite; }
+  animation: shift .1s linear;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite; }
+
+@keyframes shift {
+  0% {
+    transform: rotateZ(0deg); }
+  50% {
+    transform: rotateZ(3deg); }
+  100% {
+    transform: rotateZ(-3deg); } }
 
 #top {
   display: none; }
 
-#btt-controls, #scoreboard-controls, #wtt-controls, #giveaway-controls {
+#btt-controls, #scoreboard-controls, #wtt-controls, #giveaway-controls, #quizzo-controls {
   display: none;
   position: absolute;
-  top: 15px;
-  right: 263px;
+  top: 10px;
+  right: 328px;
   width: 300px;
   height: 168px;
   background-color: rgba(0, 0, 0, 0.45);
   padding: 20px;
   overflow-y: auto; }
-  #btt-controls label, #scoreboard-controls label, #wtt-controls label, #giveaway-controls label {
+  #btt-controls label, #scoreboard-controls label, #wtt-controls label, #giveaway-controls label, #quizzo-controls label {
     color: #ffffff; }
 
 .switch-wrap {
   position: absolute;
   top: 37px;
   right: -4px;
-  width: 160px; }
+  width: 230px; }
   .switch-wrap:before {
     position: absolute;
     top: -18px;
@@ -1129,3 +1140,72 @@ input:checked ~ .switch-paddle {
 #game-3 {
   bottom: 130px;
   left: 810px; }
+
+#quizzo {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 720px;
+  background: url(../images/quizzo/bg-quizzo.jpg) no-repeat;
+  background-size: cover;
+  z-index: 30; }
+
+#quizzo-lights {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 720px;
+  background: #000000 url(../images/quizzo/bg-quizzo-off.jpg) no-repeat;
+  z-index: 15;
+  animation-name: giveawaylights;
+  animation-duration: .8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
+
+@keyframes quizzolights {
+  0% {
+    opacity: .2; }
+  100% {
+    opacity: 1; } }
+
+#quizzo-toadhost {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1084px;
+  height: 420px;
+  margin-left: -542px;
+  background: url(../images/quizzo/quizzo-toadhost.png) no-repeat;
+  z-index: 50;
+  animation-name: toadhostfloat;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
+
+@keyframes toadhostfloat {
+  0% {
+    transform: translate(0px, 0px); }
+  50% {
+    transform: translate(0px, 20px); }
+  100% {
+    transform: translate(0px, 0px); } }
+
+#quizzo-question {
+  position: absolute;
+  top: 267px;
+  left: 250px;
+  width: 727px;
+  height: 43px;
+  display: block;
+  padding: 10px 15px;
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  color: #00fa87;
+  z-index: 40;
+  transform: rotateZ(-4deg);
+  background-color: #151515;
+  border-radius: 12px;
+  border: 7px solid #00fa87; }

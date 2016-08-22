@@ -1,3 +1,7 @@
+<?php
+    $currentVersion = "1.6.1";
+ ?>
+
 <?php require('inc/header.php'); ?>
 
 <!-- Audio Clip Calls -->
@@ -17,6 +21,9 @@
 
     <!-- Giveaways -->
     <?php require('inc/giveaways.php'); ?>
+
+    <!-- Toadboy Quizzo -->
+    <?php require('inc/quizzo.php'); ?>
 
     <!-- Independent Animated Effects -->
     <?php require('inc/effects.php'); ?>

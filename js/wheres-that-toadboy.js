@@ -49,28 +49,7 @@ function wheresThatToadboy() {
 
     wttSwitch.change(function() {
 
-        if ( wttSwitch.hasClass("wtt-on") ) {
-            wttSwitch.removeClass("wtt-on");
-            wttControls.slideUp();
-            wttFrame.hide();
-        }
-        else {
-            wttSwitch.addClass("wtt-on");
-            wttControls.slideDown();
-            wttFrame.show();
-
-            if ( bttSwitch.hasClass("btt-on") ) {
-                bttSwitch.trigger("click");
-            }
-
-            if ( scoreSwitch.hasClass("score-on") ) {
-                scoreSwitch.trigger("click");
-            }
-
-            if ( giveawaySwitch.hasClass("giveaway-on") ) {
-                giveawaySwitch.trigger("click");
-            }
-        }
+        frameCop(wttSwitch, wttFrame, wttControls, "wtt-on");
 
     });
 

@@ -4,10 +4,12 @@
 
     <script src="js/foundation.min.js"></script>
     <script src="js/plugins.js"></script>
+    <script src="js/utilities.js"></script>
     <script src="js/beat-that-toadboy.js"></script>
     <script src="js/mtsc-scoreboard.js"></script>
     <script src="js/wheres-that-toadboy.js"></script>
     <script src="js/giveaway-display.js"></script>
+    <script src="js/quizzo.js"></script>
     <script src="js/app.min.js"></script>
 
     </body>

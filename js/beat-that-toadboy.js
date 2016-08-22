@@ -1,13 +1,14 @@
 var toadPick,
-    playerPick =  $('select[name="playerchoice"]').val(),
-    logo    = $("#logo"),
-    toadboy = $("#toadboy"),
-    player  = $("#player-hand"),
-    toadHand = $("#toadboy-hand"),
-    bubble  = $("#speech-bubble"),
-    bubbleText = $(".decision"),
-    run     = $("#run"),
-    user    = $("#username").val();
+    playerPick      =  $('select[name="playerchoice"]').val(),
+    logo            = $("#logo"),
+    toadboy         = $("#toadboy"),
+    player          = $("#player-hand"),
+    toadHand        = $("#toadboy-hand"),
+    bubble          = $("#speech-bubble"),
+    bubbleText      = $(".decision"),
+    run             = $("#run"),
+    user            = $("#username").val(),
+    reset           = $("#reset");
 
 function getToadPick() {
     toadPick = Math.floor((Math.random() * 3) + 1);
@@ -98,4 +99,18 @@ run.click(function(e) {
     bubble.delay(3000).fadeIn(1000);
     toadHand.fadeIn(1000);
     player.fadeIn(1000);
+});
+
+reset.click(function(e) {
+    e.preventDefault();
+
+    bubble.fadeOut(1000);
+    toadHand.fadeOut(1000);
+    player.fadeOut(1000);
+
+    $("#toadboy").css("background-image", "url(images/toadboy.png)");
+    bubbleText.css("font-size", "45px");
+
+    getToadPick();
+
 });

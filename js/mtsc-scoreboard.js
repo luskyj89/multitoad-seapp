@@ -50,26 +50,7 @@ function mtscScoreboard() {
 
     scoreSwitch.change(function() {
 
-        if ( scoreSwitch.hasClass("score-on") ) {
-            scoreSwitch.removeClass("score-on");
-            scoreControls.slideUp();
-        }
-        else {
-            scoreSwitch.addClass("score-on");
-            scoreControls.slideDown();
-
-            if ( bttSwitch.hasClass("btt-on") ) {
-                bttSwitch.trigger("click");
-            }
-
-            if ( wttSwitch.hasClass("wtt-on") ) {
-                wttSwitch.trigger("click");
-            }
-
-            if ( giveawaySwitch.hasClass("giveaway-on") ) {
-                giveawaySwitch.trigger("click");
-            }
-        }
+        frameCopControlOnly(scoreSwitch, scoreControls, "score-on");
 
     });
 

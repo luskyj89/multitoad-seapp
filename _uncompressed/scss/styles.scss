@@ -46,13 +46,14 @@ a {
 }
 
 #main-view {
+    box-sizing: content-box;
     position: fixed;
     top: 0;
     left: 50%;
     display: block;
     width: $width;
     height: 720px;
-    margin-left: -640px;
+    margin-left: -645px;
     background-color: $dark-gray;
     background-size: cover;
     border: 5px dotted $blue;
@@ -67,9 +68,9 @@ a {
     top: 740px;
     left: 50%;
     box-sizing: border-box;
-    width: $width;
+    width: $width + 10;
     height: 197px;
-    margin-left: -640px;
+    margin-left: -645px;
     padding: 10px 15px;
     background: rgba(53, 53, 53, 0.48);
     border: 5px solid rgba(93, 93, 93, 0.35);
@@ -109,3 +110,4 @@ a {
 @import "modules/mtsc-scoreboard";
 @import "modules/wheres-that-toadboy";
 @import "modules/giveaways";
+@import "modules/quizzo";

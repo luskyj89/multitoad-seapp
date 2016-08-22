@@ -6,7 +6,6 @@ customCheerButton, customCheerAudio;
 
 var controls            = $("#controls");
 var mainView            = $("#main-view");
-var openControls        = $("#open-controls");
 
 // Settings
 var closeButton         = $(".close-button");
@@ -36,13 +35,14 @@ var scoreSwitch         = $("#scoreSwitch");
 
 // Audio Vars
 var button              = $("#button");
-var customCheerButton   = $("#custom-cheer-button");
+var customCheerButton   = $("#custom-text-button");
 var audio               = document.getElementById('audio');
-var customCheerAudio    = document.getElementById('custom-cheer-audio');
 var gameshowAudio       = document.getElementById('gameshow-audio');
 var timeClockAudio      = document.getElementById('time-clock-audio');
+var applauseAudio       = document.getElementById('applause-audio');
 var gameshowButton      = $("#gameshow-button");
 var timeClockButton     = $("#time-clock-button");
+var applauseButton      = $("#applause-button");
 
 // Query string variable to find url settings
 var queryString         = window.location.search;
@@ -107,7 +107,7 @@ function mixer() {
 
         // Adjust volume based on new slider position
         audio.volume = currentVolume;
-        customCheerAudio.volume = currentVolume;
+        applauseAudio.volume = currentVolume;
         gameshowAudio.volume = currentVolume;
         timeClockAudio.volume = currentVolume;
 
@@ -170,28 +170,7 @@ function beatThatToadboy() {
 
     bttSwitch.change(function() {
 
-        if ( bttSwitch.hasClass("btt-on") ) {
-            bttSwitch.removeClass("btt-on");
-            bttGame.hide();
-            bttControls.slideUp();
-        }
-        else {
-            bttSwitch.addClass("btt-on");
-            bttGame.show();
-            bttControls.slideDown();
-
-            if ( scoreSwitch.hasClass("score-on") ) {
-                scoreSwitch.trigger("click");
-            }
-
-            if ( wttSwitch.hasClass("wtt-on") ) {
-                wttSwitch.trigger("click");
-            }
-
-            if ( giveawaySwitch.hasClass("giveaway-on") ) {
-                giveawaySwitch.trigger("click");
-            }
-        }
+        frameCop(bttSwitch, bttGame, bttControls, "btt-on");
 
     });
 
@@ -219,23 +198,42 @@ function playCustomCheerAudio(e) {
     e.preventDefault();
 
     customCheerAudio.play(); // audio will load and then play
-    runEffect2(); // play effect 2 custom cheer
+
 
 };
 
-function playGameshowAudio() {
+/* ----------------------------------------
+   Audio Button Click
+--------------------------------------- */
+function audioClickLooping(button, audio) {
 
-    gameshowAudio.load(); // audio will load and then play
-    gameshowAudio.play();
+    if ( button.hasClass("playing") ) {
+        button.removeClass("playing");
+        audio.pause();
+    } else {
+        button.addClass("playing");
+        audio.load();
+        audio.play();
+    }
 
-};
+}
 
-function playTimeClockAudio() {
+function audioClick(button, audio) {
 
-    timeClockAudio.load(); // audio will load and then play
-    timeClockAudio.play();
+    if ( button.hasClass("playing") ) {
+        button.removeClass("playing");
+        audio.pause();
+    } else {
+        button.addClass("playing");
+        audio.load();
+        audio.play();
+        audio.onended = function() {
+            console.log(audio + "ended");
+            button.removeClass("playing");
+        };
+    }
 
-};
+}
 
 /* ----------------------------------------
    Init
@@ -245,60 +243,44 @@ function init() {
 
     button.click(playAudio);
 
-    customCheerButton.click(playCustomCheerAudio);
+    customCheerButton.click(function(e) {
+        e.preventDefault();
+        runEffect2(); // play effect 2 custom cheer
+    });
 
     gameshowButton.click(function(e) {
         e.preventDefault();
-
-        if ( gameshowButton.hasClass("playing") ) {
-            gameshowButton.removeClass("playing");
-            gameshowAudio.pause();
-        } else {
-            gameshowButton.addClass("playing");
-            playGameshowAudio();
-        }
-
+        audioClickLooping(gameshowButton, gameshowAudio);
     });
 
     timeClockButton.click(function(e) {
         e.preventDefault();
-
-        if ( timeClockButton.hasClass("playing") ) {
-            timeClockButton.removeClass("playing");
-            timeClockAudio.pause();
-        } else {
-            timeClockButton.addClass("playing");
-            playTimeClockAudio();
-        }
-
+        audioClickLooping(timeClockButton, timeClockAudio);
     });
 
-    openControls.click(function() {
-        window.open("controls.php", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+    applauseButton.click(function(e) {
+        e.preventDefault();
+        audioClick(applauseButton, applauseAudio);
     });
 
     // Settings Modals
     advancedButton.click(function(e) {
         e.preventDefault();
-
         advancedModal.fadeIn();
     });
 
     backgroundButton.click(function(e) {
         e.preventDefault();
-
         backgroundModal.fadeIn();
     });
 
     helpButton.click(function(e) {
         e.preventDefault();
-
         helpModal.fadeIn();
     });
 
     closeButton.click(function(e) {
         e.preventDefault();
-
         $(".control-modal").fadeOut();
     });
 
@@ -323,6 +305,9 @@ function init() {
 
     // Init Giveaway Display
     giveawayDisplay();
+
+    // Init Quizzo Display
+    quizzoDisplay();
 
 }
 

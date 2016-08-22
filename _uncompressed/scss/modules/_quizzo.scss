@@ -1,0 +1,77 @@
+#quizzo {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1280px;
+    height: 720px;
+    background: url(../images/quizzo/bg-quizzo.jpg) no-repeat;
+    background-size: cover;
+    z-index: 30;
+}
+
+#quizzo-lights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1280px;
+    height: 720px;
+    background: $black url(../images/quizzo/bg-quizzo-off.jpg) no-repeat;
+    z-index: 15;
+    animation-name: giveawaylights;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes quizzolights {
+    0%   { opacity: .2; }
+    100%  { opacity: 1; }
+}
+
+#quizzo-toadhost {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1084px;
+    height: 420px;
+    margin-left: -542px;
+    background: url(../images/quizzo/quizzo-toadhost.png) no-repeat;
+    z-index: 50;
+    animation-name: toadhostfloat;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes toadhostfloat {
+    0%   {
+        transform: translate(0px, 0px);
+    }
+
+    50%   {
+        transform: translate(0px, 20px);
+    }
+
+    100%  {
+        transform: translate(0px, 0px);
+    }
+}
+
+#quizzo-question {
+    position: absolute;
+    top: 267px;
+    left: 250px;
+    width: 727px;
+    height: 43px;
+    display: block;
+    padding: 10px 15px;
+    font-family: $font-oswald;
+    font-size: 28px;
+    color: $green;
+    z-index: 40;
+    transform: rotateZ(-4deg);
+    background-color: $darkest-gray;
+    border-radius: 12px;
+    border: 7px solid $green;
+}

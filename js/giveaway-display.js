@@ -20,28 +20,7 @@ function giveawayDisplay() {
 
     giveawaySwitch.change(function() {
 
-        if ( giveawaySwitch.hasClass("giveaway-on") ) {
-            giveawaySwitch.removeClass("giveaway-on");
-            giveawayControls.slideUp();
-            giveawayFrame.hide();
-        }
-        else {
-            giveawaySwitch.addClass("giveaway-on");
-            giveawayControls.slideDown();
-            giveawayFrame.show();
-
-            if ( bttSwitch.hasClass("btt-on") ) {
-                bttSwitch.trigger("click");
-            }
-
-            if ( scoreSwitch.hasClass("score-on") ) {
-                scoreSwitch.trigger("click");
-            }
-
-            if ( wttSwitch.hasClass("wtt-on") ) {
-                wttSwitch.trigger("click");
-            }
-        }
+        frameCop(giveawaySwitch, giveawayFrame, giveawayControls, "giveaway-on");
 
     });
 

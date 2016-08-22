@@ -26,10 +26,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 78%;
-    height: 190px;
+    width: 100%;
+    height: 187px;
     padding: 10px 10px 10px 40px;
-    background: #373737;
+    background: rgba(14, 14, 14, 0.95);
+    z-index: 999;
 }
 
 .close-button {

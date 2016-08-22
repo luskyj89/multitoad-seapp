@@ -2,7 +2,7 @@
     <source src="audio/loud-bang.m4a" type="audio/mpeg" />
 </audio>
 
-<audio id="custom-cheer-audio">
+<audio id="applause-audio">
     <source src="audio/crowd-cheer.m4a" type="audio/mpeg" />
 </audio>
 

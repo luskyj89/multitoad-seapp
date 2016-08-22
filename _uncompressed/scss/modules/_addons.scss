@@ -3,11 +3,11 @@
     display: none;
 }
 
-#btt-controls, #scoreboard-controls, #wtt-controls, #giveaway-controls {
+#btt-controls, #scoreboard-controls, #wtt-controls, #giveaway-controls, #quizzo-controls {
     display: none;
     position: absolute;
-    top: 15px;
-    right: 263px;
+    top: 10px;
+    right: 328px;
     width: 300px;
     height: 168px;
     background-color: rgba(0, 0, 0, 0.45);
@@ -23,7 +23,7 @@
     position: absolute;
     top: 37px;
     right: -4px;
-    width: 160px;
+    width: 230px;
 
     &:before {
         position: absolute;
