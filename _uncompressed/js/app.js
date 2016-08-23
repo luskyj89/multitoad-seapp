@@ -251,6 +251,10 @@ function initIntro() {
             e.preventDefault();
             introModal.addClass("intro-closed");
         });
+
+        introModal.click(function(e) {
+            introModal.addClass("intro-closed");
+        });
     }
 
 }
@@ -330,6 +334,9 @@ function init() {
 
     // Init Quizzo Display
     quizzoDisplay();
+
+    // Init Video Display Frame
+    videoDisplay();
 
 }
 

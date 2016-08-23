@@ -32,6 +32,10 @@ function frameCop(toggle, frame, controls, state) {
             quizzoSwitch.trigger("click");
         }
 
+        if ( videoSwitch.hasClass("video-on") ) {
+            videoSwitch.trigger("click");
+        }
+
         toggle.addClass(state);
         frame.show();
         controls.slideDown();
@@ -70,6 +74,10 @@ function frameCopControlOnly(toggle, controls, state) {
 
         if ( quizzoSwitch.hasClass("quizzo-on") ) {
             quizzoSwitch.trigger("click");
+        }
+
+        if ( videoSwitch.hasClass("video-on") ) {
+            videoSwitch.trigger("click");
         }
 
         toggle.addClass(state);

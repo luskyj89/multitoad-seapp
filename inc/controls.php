@@ -34,6 +34,9 @@
     <!-- Toadboy Quizzo Controls -->
     <?php require('inc/controls/quizzo.php'); ?>
 
+    <!-- Toadboy Quizzo Controls -->
+    <?php require('inc/controls/video.php'); ?>
+
     <!-- Mixer Switch Wrap -->
     <?php require('inc/controls/mixer.php'); ?>
 

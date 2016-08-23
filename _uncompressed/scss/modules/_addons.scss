@@ -3,7 +3,7 @@
     display: none;
 }
 
-#btt-controls, #scoreboard-controls, #wtt-controls, #giveaway-controls, #quizzo-controls {
+#btt-controls, #scoreboard-controls, #wtt-controls, #giveaway-controls, #quizzo-controls, #video-controls {
     display: none;
     position: absolute;
     top: 10px;
@@ -16,6 +16,16 @@
 
     label {
         color: $white;
+    }
+
+    p {
+        font-size: 14px;
+
+        &.error {
+            display: none;
+            color: red;
+            font-weight: bold;
+        }
     }
 }
 

@@ -1,5 +1,5 @@
 <?php
-    $currentVersion = "1.6.2";
+    $currentVersion = "1.6.3";
  ?>
 
 <?php require('inc/header.php'); ?>
@@ -24,6 +24,9 @@
 
     <!-- Toadboy Quizzo -->
     <?php require('inc/quizzo.php'); ?>
+
+    <!-- Toadboy Quizzo -->
+    <?php require('inc/video.php'); ?>
 
     <!-- Independent Animated Effects -->
     <?php require('inc/effects.php'); ?>

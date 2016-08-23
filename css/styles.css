@@ -683,14 +683,15 @@ a {
   background: #E4E4E4;
   z-index: 9999;
   transform: translateY(100vh) rotateY(100deg);
-  transition: all .7s ease-out; }
+  transition: all .7s ease-out;
+  cursor: pointer; }
   #intro-modal.intro-visible {
     transform: translateY(0px); }
   #intro-modal.intro-closed {
     transform: translateX(-100vw); }
   #intro-modal h1 {
-    width: 500px;
-    margin: 0 auto;
+    width: 490px;
+    margin: 0 auto 10px;
     font-family: "Oswald", sans-serif;
     font-weight: 700;
     font-style: italic;
@@ -726,7 +727,7 @@ a {
     top: 20px;
     right: 20px;
     left: auto;
-    font-family: 'icomoon' !important;
+    font-family: 'icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -739,9 +740,9 @@ a {
       color: #1aa7c5; }
   #intro-modal .streamboy-logo {
     display: block;
-    width: 431px;
+    width: 400px;
     height: 279px;
-    margin: 40px auto 20px;
+    margin: 40px auto 10px;
     background: url(../images/streamboy-logo.png) no-repeat;
     background-size: 100%; }
   #intro-modal .tout-column {
@@ -752,7 +753,7 @@ a {
     padding: 0px 23px;
     text-align: center; }
   #intro-modal .tout-icon {
-    font-family: 'icomoon' !important;
+    font-family: 'icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -764,6 +765,13 @@ a {
       color: #24b36e; }
     #intro-modal .tout-icon.blue {
       color: #1aa7c5; }
+  #intro-modal .version-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #5a5a5a; }
 
 #mixer {
   position: relative;
@@ -959,7 +967,7 @@ a {
 #top {
   display: none; }
 
-#btt-controls, #scoreboard-controls, #wtt-controls, #giveaway-controls, #quizzo-controls {
+#btt-controls, #scoreboard-controls, #wtt-controls, #giveaway-controls, #quizzo-controls, #video-controls {
   display: none;
   position: absolute;
   top: 10px;
@@ -969,8 +977,14 @@ a {
   background-color: rgba(0, 0, 0, 0.45);
   padding: 20px;
   overflow-y: auto; }
-  #btt-controls label, #scoreboard-controls label, #wtt-controls label, #giveaway-controls label, #quizzo-controls label {
+  #btt-controls label, #scoreboard-controls label, #wtt-controls label, #giveaway-controls label, #quizzo-controls label, #video-controls label {
     color: #ffffff; }
+  #btt-controls p, #scoreboard-controls p, #wtt-controls p, #giveaway-controls p, #quizzo-controls p, #video-controls p {
+    font-size: 14px; }
+    #btt-controls p.error, #scoreboard-controls p.error, #wtt-controls p.error, #giveaway-controls p.error, #quizzo-controls p.error, #video-controls p.error {
+      display: none;
+      color: red;
+      font-weight: bold; }
 
 .switch-wrap {
   position: absolute;
@@ -1316,3 +1330,34 @@ input:checked ~ .switch-paddle {
   background-color: #151515;
   border-radius: 12px;
   border: 7px solid #00fa87; }
+
+#video {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 720px;
+  background-size: cover;
+  z-index: 30; }
+
+#video-wrap {
+  position: relative;
+  z-index: 40; }
+
+#video-message {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  height: 95px;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.75);
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  transform: translateY(95px);
+  transition: transform .8s ease-out;
+  z-index: 50; }
+  #video-message.message-visible {
+    transform: translateY(0px); }

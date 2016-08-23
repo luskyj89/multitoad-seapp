@@ -10,6 +10,7 @@
     <script src="js/wheres-that-toadboy.js"></script>
     <script src="js/giveaway-display.js"></script>
     <script src="js/quizzo.js"></script>
+    <script src="js/video-display.js"></script>
     <script src="js/app.min.js"></script>
 
     </body>

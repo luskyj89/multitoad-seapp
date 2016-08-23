@@ -14,7 +14,7 @@
         <div class="tout-column">
             <span class="tout-icon blue">g</span>
             <h2>Giveaways</h2>
-            <p>Use the giveaway scene to display the game or games of your current giveaway.</p>
+            <p>Use the giveaway scene to display box art for your current giveaway. Copy any image URL with no need to save any files.</p>
         </div>
 
         <div class="tout-column">
@@ -26,9 +26,11 @@
         <div class="tout-column">
             <span class="tout-icon blue">y</span>
             <h2>Other Tools</h2>
-            <p>Streamboy includes other tools like a Youtube frame (no more time-wasting window captures) and a scoreboard for fighting games.</p>
+            <p>Streamboy includes other tools like a YouTube frame (no more time-wasting window captures) and a scoreboard for fighting games.</p>
         </div>
     </div>
+
+    <span class="version-number">v<?php echo $currentVersion; ?></span>
 
     <a id="close-intro" class="close-button" href="#" title="close">x</a>
 

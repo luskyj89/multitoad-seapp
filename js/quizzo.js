@@ -23,7 +23,6 @@ function quizzoDisplay() {
     });
 
     setQuestion.click(function(e) {
-        console.log("click worked");
         e.preventDefault();
 
         var questionInput = $("#board-question").val();

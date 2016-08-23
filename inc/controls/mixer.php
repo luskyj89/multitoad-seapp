@@ -48,6 +48,14 @@
                 <span class="show-for-sr">Activate Quizzo Display</span>
             </label>
         </div>
+
+        <div class="switch">
+            <span class="switch-title">Videos</span>
+            <input class="switch-input" id="videoSwitch" type="checkbox" name="videoSwitch">
+            <label class="switch-paddle" for="videoSwitch">
+                <span class="show-for-sr">Activate Video Display</span>
+            </label>
+        </div>
     </div>
 
 </div>
