@@ -242,12 +242,16 @@ function audioClick(button, audio) {
 --------------------------------------- */
 function initIntro() {
 
-    introModal.addClass("intro-visible");
+    if (queryString.indexOf('intro=false')!==-1) {
+        console.log("Skip Intro Overlay");
+    } else {
+        introModal.addClass("intro-visible");
 
-    closeIntro.click(function(e) {
-        e.preventDefault();
-        introModal.addClass("intro-closed");
-    });
+        closeIntro.click(function(e) {
+            e.preventDefault();
+            introModal.addClass("intro-closed");
+        });
+    }
 
 }
 
