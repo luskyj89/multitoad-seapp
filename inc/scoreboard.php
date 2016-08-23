@@ -6,7 +6,7 @@
         <span class="scoreboard-ele">P1</span>
     </div>
     <div id="game-type">
-        <span class="scoreboard-ele">MTSC</span>
+        <span class="scoreboard-ele">Scoreboard</span>
     </div>
     <div id="right-player">
         <span class="scoreboard-ele">P2</span>

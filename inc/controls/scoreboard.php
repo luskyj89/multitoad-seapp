@@ -13,7 +13,7 @@
     </div>
 
     <label>Game Variation
-        <input id="game-variation" type="text" name="game-type" value="MTSC" />
+        <input id="game-variation" type="text" name="game-type" value="Scoreboard" />
     </label>
     <label>Player 1
         <input id="player1" type="text" name="player1" value="P1" />

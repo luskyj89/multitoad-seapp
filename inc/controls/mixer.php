@@ -9,7 +9,7 @@
     <span class="current-volume">Volume: 50%</span>
 
     <div class="switch-wrap">
-        <div class="switch">
+        <div class="switch btt-logo">
             <span class="switch-title">&nbsp;</span>
             <input class="switch-input" id="bttSwitch" type="checkbox" name="bttSwitch">
             <label class="switch-paddle" for="bttSwitch">
@@ -17,16 +17,16 @@
             </label>
         </div>
 
-        <div class="switch">
-            <span class="switch-title">Scoreboard</span>
-            <input class="switch-input" id="scoreSwitch" type="checkbox" name="scoreSwitch">
-            <label class="switch-paddle" for="scoreSwitch">
-                <span class="show-for-sr">Activate Scoreboard Controls</span>
+        <div class="switch quizzo-logo">
+            <span class="switch-title">&nbsp;</span>
+            <input class="switch-input" id="quizzoSwitch" type="checkbox" name="quizzoSwitch">
+            <label class="switch-paddle" for="quizzoSwitch">
+                <span class="show-for-sr">Activate Quizzo Display</span>
             </label>
         </div>
 
-        <div class="switch">
-            <span class="switch-title">WTT</span>
+        <div class="switch wtt-logo">
+            <span class="switch-title">&nbsp;</span>
             <input class="switch-input" id="wttSwitch" type="checkbox" name="wttSwitch">
             <label class="switch-paddle" for="wttSwitch">
                 <span class="show-for-sr">Activate Where's That Toadboy</span>
@@ -42,10 +42,10 @@
         </div>
 
         <div class="switch">
-            <span class="switch-title">Quizzo</span>
-            <input class="switch-input" id="quizzoSwitch" type="checkbox" name="quizzoSwitch">
-            <label class="switch-paddle" for="quizzoSwitch">
-                <span class="show-for-sr">Activate Quizzo Display</span>
+            <span class="switch-title">Scoreboard</span>
+            <input class="switch-input" id="scoreSwitch" type="checkbox" name="scoreSwitch">
+            <label class="switch-paddle" for="scoreSwitch">
+                <span class="show-for-sr">Activate Scoreboard Controls</span>
             </label>
         </div>
 

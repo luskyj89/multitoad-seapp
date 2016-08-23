@@ -921,7 +921,7 @@ a {
   margin-left: -450px;
   background: url(../images/dunked/bg-dunked.png) no-repeat;
   background-size: 100%;
-  z-index: 1; }
+  z-index: 89; }
 
 #effect-1-title {
   position: absolute;
@@ -932,7 +932,7 @@ a {
   margin-left: -450px;
   background: url(../images/dunked/title-dunked.png) no-repeat;
   background-size: 100%;
-  z-index: 10; }
+  z-index: 90; }
 
 #custom-cheer-text {
   box-sizing: border-box;
@@ -954,7 +954,8 @@ a {
   animation: shift .1s linear;
   animation-delay: 0s;
   animation-direction: alternate;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+  z-index: 100; }
 
 @keyframes shift {
   0% {
@@ -991,24 +992,39 @@ a {
   top: 37px;
   right: -4px;
   width: 230px; }
-  .switch-wrap:before {
-    position: absolute;
-    top: -18px;
-    left: 6px;
-    content: " ";
-    height: 50px;
-    width: 50px;
-    background: url(../images/logo-bttb.png) no-repeat;
-    background-size: 100%;
-    z-index: 100; }
 
 .switch {
+  position: relative;
   float: left;
   width: 64px;
   height: 50px;
   margin-bottom: 10px;
   margin-right: 10px;
   z-index: 150; }
+  .switch:before {
+    position: absolute;
+    top: -18px;
+    left: 6px;
+    content: " ";
+    width: 50px;
+    height: 50px;
+    z-index: 1; }
+  .switch .switch-paddle {
+    z-index: 100; }
+
+.btt-logo:before {
+  background: url(../images/logo-bttb.png) no-repeat;
+  background-size: 100%; }
+
+.quizzo-logo:before {
+  background: url(../images/logo-quizzo-sm.png) no-repeat;
+  background-size: 100%; }
+
+.wtt-logo:before {
+  width: 48px;
+  left: 7px;
+  background: url(../images/logo-wtt-sm.png) no-repeat;
+  background-size: 100%; }
 
 .button-group {
   margin-top: 10px; }

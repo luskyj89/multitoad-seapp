@@ -34,27 +34,60 @@
     top: 37px;
     right: -4px;
     width: 230px;
-
-    &:before {
-        position: absolute;
-        top: -18px;
-        left: 6px;
-        content: " ";
-        height: 50px;
-        width: 50px;
-        background: url(../images/logo-bttb.png) no-repeat;
-        background-size: 100%;
-        z-index: 100;
-    }
 }
 
 .switch {
+    position: relative;
     float: left;
     width: 64px;
     height: 50px;
     margin-bottom: 10px;
     margin-right: 10px;
     z-index: 150;
+
+    &:before {
+        position: absolute;
+        top: -18px;
+        left: 6px;
+        content: " ";
+        width: 50px;
+        height: 50px;
+        z-index: 1;
+    }
+
+    .switch-paddle {
+        z-index: 100;
+    }
+
+}
+
+.btt-logo {
+
+    &:before {
+        background: url(../images/logo-bttb.png) no-repeat;
+        background-size: 100%;
+    }
+
+}
+
+.quizzo-logo {
+
+    &:before {
+        background: url(../images/logo-quizzo-sm.png) no-repeat;
+        background-size: 100%;
+    }
+
+}
+
+.wtt-logo {
+
+    &:before {
+        width: 48px;
+        left: 7px;
+        background: url(../images/logo-wtt-sm.png) no-repeat;
+        background-size: 100%;
+    }
+
 }
 
 .button-group {
