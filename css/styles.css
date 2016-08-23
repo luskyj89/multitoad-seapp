@@ -562,14 +562,32 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-instagram:before {
+  content: "\34"; }
+
 .icon-image:before {
+  content: "\62"; }
+
+.icon-pacman:before {
   content: "\70"; }
 
 .icon-bullhorn:before {
-  content: "\76"; }
+  content: "\68"; }
+
+.icon-zoom-in:before {
+  content: "\31"; }
+
+.icon-zoom-out:before {
+  content: "\32"; }
 
 .icon-wrench:before {
   content: "\77"; }
+
+.icon-equalizer2:before {
+  content: "\65"; }
+
+.icon-gift:before {
+  content: "\67"; }
 
 .icon-menu:before {
   content: "\6d"; }
@@ -583,16 +601,16 @@ textarea {
 .icon-facebook:before {
   content: "\66"; }
 
-.icon-instagram:before {
-  content: "\69"; }
-
 .icon-twitter:before {
   content: "\74"; }
 
-.icon-twitch:before {
-  content: "\62"; }
+.icon-youtube:before {
+  content: "\79"; }
 
-.icon-steam2:before {
+.icon-twitch:before {
+  content: "\33"; }
+
+.icon-steam:before {
   content: "\73"; }
 
 body {
@@ -657,6 +675,95 @@ a {
   box-sizing: border-box;
   float: left;
   width: 50%; }
+
+#intro-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #E4E4E4;
+  z-index: 9999;
+  transform: translateY(100vh) rotateY(100deg);
+  transition: all .7s ease-out; }
+  #intro-modal.intro-visible {
+    transform: translateY(0px); }
+  #intro-modal.intro-closed {
+    transform: translateX(-100vw); }
+  #intro-modal h1 {
+    width: 500px;
+    margin: 0 auto;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 35px;
+    color: #1c1d1e; }
+    #intro-modal h1 .green {
+      color: #24b36e; }
+    #intro-modal h1 .blue {
+      color: #1aa7c5; }
+  #intro-modal h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #1c1d1e;
+    text-transform: uppercase; }
+  #intro-modal p {
+    font-size: 15px;
+    color: #5a5a5a; }
+  #intro-modal .wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1135px;
+    height: 630px;
+    margin-left: -567px;
+    margin-top: -355px; }
+  #intro-modal .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: auto;
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 25px;
+    text-transform: none;
+    line-height: 1;
+    color: #1c1d1e; }
+    #intro-modal .close-button:hover {
+      color: #1aa7c5; }
+  #intro-modal .streamboy-logo {
+    display: block;
+    width: 431px;
+    height: 279px;
+    margin: 40px auto 20px;
+    background: url(../images/streamboy-logo.png) no-repeat;
+    background-size: 100%; }
+  #intro-modal .tout-column {
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+    margin-top: 30px;
+    padding: 0px 23px;
+    text-align: center; }
+  #intro-modal .tout-icon {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 65px;
+    text-transform: none;
+    line-height: 1; }
+    #intro-modal .tout-icon.green {
+      color: #24b36e; }
+    #intro-modal .tout-icon.blue {
+      color: #1aa7c5; }
 
 #mixer {
   position: relative;

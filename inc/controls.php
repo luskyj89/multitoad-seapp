@@ -4,7 +4,7 @@
 
         <div class="settings-wrap">
             <a href="#" id="advanced-button" class="settings-icon" title="Settings">w</a>
-            <a href="#" id="background-button" class="settings-icon" title="Background">p</a>
+            <a href="#" id="background-button" class="settings-icon" title="Background">b</a>
             <a href="#" id="help-button" class="settings-icon" title="Help">q</a>
         </div>
 

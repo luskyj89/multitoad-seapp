@@ -1,5 +1,5 @@
 <?php
-    $currentVersion = "1.6.1";
+    $currentVersion = "1.6.2";
  ?>
 
 <?php require('inc/header.php'); ?>
@@ -29,6 +29,9 @@
     <?php require('inc/effects.php'); ?>
 
 </section>
+
+<!-- Intro Overlay -->
+<?php require('inc/intro-modal.php'); ?>
 
 <!-- Control Panel -->
 <?php require('inc/controls.php'); ?>

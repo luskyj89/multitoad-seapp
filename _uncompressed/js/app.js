@@ -6,6 +6,8 @@ customCheerButton, customCheerAudio;
 
 var controls            = $("#controls");
 var mainView            = $("#main-view");
+var introModal          = $("#intro-modal");
+var closeIntro          = $("#close-intro");
 
 // Settings
 var closeButton         = $(".close-button");
@@ -236,6 +238,20 @@ function audioClick(button, audio) {
 }
 
 /* ----------------------------------------
+   Intro Modal
+--------------------------------------- */
+function initIntro() {
+
+    introModal.addClass("intro-visible");
+
+    closeIntro.click(function(e) {
+        e.preventDefault();
+        introModal.addClass("intro-closed");
+    });
+
+}
+
+/* ----------------------------------------
    Init
 --------------------------------------- */
 
@@ -284,6 +300,8 @@ function init() {
         $(".control-modal").fadeOut();
     });
 
+    // Init Intro Modals
+    initIntro();
 
     // Init mixer
     mixer();

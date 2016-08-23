@@ -12,7 +12,10 @@
 $white: #ffffff;
 $black: #000000;
 $green: #00fa87;
+$dark-green: #24b36e;
+$dark-blue: #1aa7c5;
 $blue: #22d7fd;
+$gray: #5a5a5a;
 $light-gray: #E4E4E4;
 $dark-gray: #1c1d1e;
 $darkest-gray: #151515;
@@ -92,6 +95,128 @@ a {
     box-sizing: border-box;
     float: left;
     width: 50%;
+}
+
+#intro-modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: $light-gray;
+    z-index: 9999;
+    transform: translateY(100vh) rotateY(100deg);;
+    transition: all .7s ease-out;
+
+    &.intro-visible {
+        transform: translateY(0px);
+    }
+
+    &.intro-closed {
+        transform: translateX(-100vw);
+    }
+
+    h1 {
+        width: 500px;
+        margin: 0 auto;
+        @include font-oswald-bold;
+        font-style: italic;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 35px;
+        color: $dark-gray;
+
+        .green {
+            color: $dark-green;
+        }
+
+        .blue {
+            color: $dark-blue;
+        }
+    }
+
+    h2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        @include font-oswald-bold;
+        font-style: italic;
+        color: $dark-gray;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 15px;
+        color: #5a5a5a;
+    }
+
+    .wrap {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 1135px;
+        height: 630px;
+        margin-left: -567px;
+        margin-top: -355px;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        left: auto;
+        font-family: 'icomoon' !important;
+        speak: none;
+        font:{
+            style: normal;
+            weight: normal;
+            variant: normal;
+            size: 25px;
+        }
+        text-transform: none;
+        line-height: 1;
+        color: $dark-gray;
+
+        &:hover {
+            color: $dark-blue;
+        }
+    }
+
+    .streamboy-logo {
+        display: block;
+        width: 431px;
+        height: 279px;
+        margin: 40px auto 20px;
+        background: url(../images/streamboy-logo.png) no-repeat;
+        background-size: 100%;
+    }
+
+    .tout-column {
+        box-sizing: border-box;
+        width: 25%;
+        float: left;
+        margin-top: 30px;
+        padding: 0px 23px;
+        text-align: center;
+    }
+
+    .tout-icon {
+        font-family: 'icomoon' !important;
+        speak: none;
+        font:{
+            style: normal;
+            weight: normal;
+            variant: normal;
+            size: 65px;
+        }
+        text-transform: none;
+        line-height: 1;
+
+        &.green {
+            color: $dark-green;
+        }
+
+        &.blue {
+            color: $dark-blue;
+        }
+    }
 }
 
 // Mixer SCSS
