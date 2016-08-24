@@ -18,12 +18,17 @@ var advancedModal       = $("#advanced-settings-modal");
 var backgroundModal     = $("#background-settings-modal");
 var helpModal           = $("#help-modal");
 var updateSettings      = $("#update-settings");
+var updateAdvanced      = $("#update-advanced-settings");
 
 // Effect Specific
 var effect1             = $("#effect-1");
 var effect1Title        = $("#effect-1-title");
 var customCheerEffect   = $("#custom-cheer-text");
 var customTextInput     = $("#custom-text").val();
+var toadboyToggle       = $("#toadboy-toggle");
+var theToadboy          = $("#the-toadboy");
+var customToggleImage   = $("#custom-toggle-image");
+var toadboyPosition     = $("#toadboy-position");
 
 // Mixer Vars
 var masterVolSlider     = $("#master-vol-slider");
@@ -260,6 +265,75 @@ function initIntro() {
 }
 
 /* ----------------------------------------
+   Toadboy Toggle
+--------------------------------------- */
+function toadboy() {
+
+    toadboyToggle.click(function(e) {
+
+        if ( theToadboy.hasClass("toadboy-active") ) {
+
+            theToadboy.removeClass("toadboy-active");
+            theToadboy.removeClass("toadboy-visible");
+
+            setTimeout(function() {
+                theToadboy.removeClass("toadboy-turnt");
+
+            },500);
+
+        } else {
+
+            theToadboy.addClass("toadboy-active");
+            theToadboy.addClass("toadboy-visible");
+
+            setTimeout(function() {
+                theToadboy.addClass("toadboy-turnt");
+            }, 1500);
+
+        }
+
+    });
+
+}
+
+/* ----------------------------------------
+   Advanced Settings
+--------------------------------------- */
+function advancedSettings() {
+
+    updateAdvanced.click(function(e) {
+        e.preventDefault();
+
+        var customToggleImageVal = customToggleImage.val();
+        var selectedPosition = "Bottom Right";
+
+        $("#toadboy-position option:selected").each(function() {
+            selectedPosition = $(this).text();
+        })
+
+        console.log(selectedPosition + " selected");
+
+        if (selectedPosition == "Bottom Right") {
+
+            theToadboy.css("right", "100px");
+
+        } else if (selectedPosition == "Bottom Left") {
+
+            theToadboy.css("right", "900px");
+
+        }
+
+        if ( customToggleImageVal.length > 0 ) {
+            theToadboy.css("background-image", "url(" + customToggleImageVal + ")");
+        } else {
+            theToadboy.css("background-image", "url(images/toad-winking.gif)");
+        }
+
+    });
+
+}
+
+/* ----------------------------------------
    Init
 --------------------------------------- */
 
@@ -337,6 +411,12 @@ function init() {
 
     // Init Video Display Frame
     videoDisplay();
+
+    // Init Toadboy Toggle
+    toadboy();
+
+    // Init Advanced Settings
+    advancedSettings();
 
 }
 

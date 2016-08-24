@@ -38,6 +38,11 @@ h1, h2 {
     color: $green;
 }
 
+select {
+    height: 40px;
+    margin-bottom: 15px;
+}
+
 a {
     color: $blue;
     text-decoration: none;
@@ -228,6 +233,9 @@ a {
         color: $gray;
     }
 }
+
+// Partials
+@import "partials/toadboy";
 
 // Mixer SCSS
 @import "modules/mixer";

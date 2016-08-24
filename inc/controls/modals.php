@@ -1,8 +1,24 @@
 <div id="advanced-settings-modal" class="control-modal">
+    <div class="wrap">
+        <label id="custom-text-label" class="mixer-input">Custom Text
+            <input id="custom-text" type="text" placeholder="(Optional)">
+        </label>
 
-    <label id="custom-text-label" class="mixer-input">Custom Text
-        <input id="custom-text" type="text" placeholder="(Optional)">
-    </label>
+        <label class="mixer-input">Custom Toggle Image
+            <input id="custom-toggle-image" type="text" placeholder="(Optional: Enter URL)">
+        </label>
+
+        <label class="mixer-input">Toadboy Toggle Position
+          <select id="toadboy-position">
+            <option value="bottomright">Bottom Right</option>
+            <option value="bottomleft">Bottom Left</option>
+          </select>
+        </label>
+
+        <div class="small button-group">
+            <a href="#" id="update-advanced-settings" class="button">Update Settings</a>
+        </div>
+    </div>
 
     <a href="#" class="settings-icon close-button" title="Close">x</a>
 </div>

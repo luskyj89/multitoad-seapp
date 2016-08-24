@@ -9,7 +9,8 @@
         </div>
 
         <a id="button" class="effect-btn first" href="#">Dunked</a>
-        <a id="custom-text-button" class="effect-btn" href="#">Text Effect</a> <br/>
+        <a id="custom-text-button" class="effect-btn" href="#">Text Effect</a>
+        <a id="toadboy-toggle" class="effect-btn" href="#">Toadboy Toggle</a> <br/>
 
         <a id="gameshow-button" class="effect-btn sound-btn first" href="#">Gameshow Music</a>
         <a id="time-clock-button" class="effect-btn sound-btn" href="#">Time Clock Music</a>

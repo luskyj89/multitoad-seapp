@@ -4,3 +4,6 @@
 
 <!-- Custom Cheer -->
 <span id="custom-cheer-text">Unbelievable!</span>
+
+<!-- Toadboy -->
+<figure id="the-toadboy"></figure>
