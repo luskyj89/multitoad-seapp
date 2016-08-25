@@ -1,5 +1,5 @@
 <?php
-    $currentVersion = "1.6.4";
+    $currentVersion = "1.6.5";
  ?>
 
 <?php require('inc/header.php'); ?>

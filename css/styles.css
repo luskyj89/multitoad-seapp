@@ -816,6 +816,23 @@ a {
   float: left;
   margin-top: 7px; }
 
+.notify-muted {
+  display: none;
+  position: absolute;
+  top: 47px;
+  left: -45px;
+  width: 166px;
+  padding: 21px 10px;
+  background: rgba(0, 0, 0, 0.87);
+  transform: rotateZ(90deg);
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 12px;
+  z-index: 100; }
+
 .slider {
   background-color: #151515;
   border: 2px solid rgba(34, 215, 253, 0.71); }
@@ -919,6 +936,7 @@ a {
 
 .control-modal {
   display: none;
+  overflow: auto;
   position: absolute;
   top: 0;
   left: 0;
@@ -943,6 +961,15 @@ a {
 
 #advanced-settings-modal .wrap {
   width: 720px; }
+
+tbody, tfoot, thead {
+  border: 0;
+  background-color: #2f2f2f; }
+
+td {
+  border: 1px solid #000000;
+  background: #1c1d1e;
+  text-align: center; }
 
 #effect-1 {
   position: absolute;
@@ -1042,7 +1069,16 @@ a {
     height: 50px;
     z-index: 1; }
   .switch .switch-paddle {
+    position: relative;
     z-index: 100; }
+  .switch .number {
+    position: absolute;
+    top: -3px;
+    left: 10px;
+    font-size: 20px;
+    color: #1aa7c5;
+    z-index: 10000;
+    text-shadow: 0px 1px #5a5a5a; }
 
 .btt-logo:before {
   background: url(../images/logo-bttb.png) no-repeat;

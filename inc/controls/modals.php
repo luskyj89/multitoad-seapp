@@ -51,6 +51,47 @@
 
     <p>(Documentation Coming soon)</p>
 
+    <p><strong>Hot Keys (Only while browser window is active):</strong></p>
+
+    <table width="800" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td>Beat That Toadboy</td>
+            <td>Quizzo</td>
+            <td>Where's That Toadboy?</td>
+            <td>Giveaway</td>
+            <td>Scoreboard</td>
+            <td>Videos</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+    <table width="800" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td>Dunked Effect</td>
+            <td>Text Effect</td>
+            <td>Toadboy Toggle</td>
+            <td>Gameshow Music</td>
+            <td>Time Clock Music</td>
+            <td>Applause</td>
+            <td>Mute</td>
+        </tr>
+        <tr>
+            <td>q</td>
+            <td>w</td>
+            <td>e</td>
+            <td>a</td>
+            <td>s</td>
+            <td>d</td>
+            <td>m</td>
+        </tr>
+    </table>
+
     <p>&copy; 2016 <a href="http://multitoad.com" target="_blank">Multitoad.com</a> | Created by <a href="http://johnlusky.com" target="_blank">John Lusky</a> | All Rights Reserved</p>
 
     <a href="#" class="settings-icon close-button" title="Close">x</a>

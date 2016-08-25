@@ -41,12 +41,8 @@ var bttControls         = $("#btt-controls");
 var scoreSwitch         = $("#scoreSwitch");
 
 // Audio Vars
-var button              = $("#button");
+var dunkedButton        = $("#button");
 var customCheerButton   = $("#custom-text-button");
-var audio               = document.getElementById('audio');
-var gameshowAudio       = document.getElementById('gameshow-audio');
-var timeClockAudio      = document.getElementById('time-clock-audio');
-var applauseAudio       = document.getElementById('applause-audio');
 var gameshowButton      = $("#gameshow-button");
 var timeClockButton     = $("#time-clock-button");
 var applauseButton      = $("#applause-button");
@@ -113,15 +109,11 @@ function mixer() {
         var currentVolume = parseInt(currentVolume) / 100;
 
         // Adjust volume based on new slider position
-        audio.volume = currentVolume;
-        applauseAudio.volume = currentVolume;
-        gameshowAudio.volume = currentVolume;
-        timeClockAudio.volume = currentVolume;
+        audioVolume(currentVolume);
 
         // Set our volume display
         currentVolumeLabel.html("Volume: " + Math.round(currentVolume * 100) + "%");
 
-        console.log( currentVolume, audio.volume );
     });
 }
 
@@ -195,7 +187,7 @@ function playAudio(e) {
 
     e.preventDefault();
 
-    audio.play(); // audio will load and then play
+    dunkedAudio.play(); // audio will load and then play
     runEffect1(); // play effect 1 title animation
 
 };
@@ -339,7 +331,7 @@ function advancedSettings() {
 
 function init() {
 
-    button.click(playAudio);
+    dunkedButton.click(playAudio);
 
     customCheerButton.click(function(e) {
         e.preventDefault();
@@ -428,5 +420,11 @@ $(document).ready(function(){
     document.addEventListener("touchstart", function(){}, true);
 
     init();
+
+});
+
+$(document).keydown(function() {
+
+    hotkeys();
 
 });
