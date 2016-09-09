@@ -87,7 +87,7 @@ function closeEffect2() {
 function runEffect2() {
     var customTextInput = $("#custom-text").val();
 
-    if (customTextInput != "") {
+    if (customTextInput !== "") {
         customCheerEffect.html(customTextInput);
     }
 
@@ -127,7 +127,7 @@ function keyPicker() {
         var selectedColor = "Not Selected";
         $("#color-key option:selected").each(function() {
             selectedColor = $(this).text();
-        })
+        });
 
         console.log(selectedColor + " selected");
 
@@ -190,7 +190,7 @@ function playAudio(e) {
     dunkedAudio.play(); // audio will load and then play
     runEffect1(); // play effect 1 title animation
 
-};
+}
 
 function playCustomCheerAudio(e) {
 
@@ -198,8 +198,7 @@ function playCustomCheerAudio(e) {
 
     customCheerAudio.play(); // audio will load and then play
 
-
-};
+}
 
 /* ----------------------------------------
    Audio Button Click
@@ -301,7 +300,7 @@ function advancedSettings() {
 
         $("#toadboy-position option:selected").each(function() {
             selectedPosition = $(this).text();
-        })
+        });
 
         console.log(selectedPosition + " selected");
 
@@ -425,6 +424,14 @@ $(document).ready(function(){
 
 $(document).keydown(function() {
 
-    hotkeys();
+    if ( $("input").is(':focus') ) {
+
+        // Disable hotkeys while input has focus
+
+    } else {
+
+        hotkeys();
+
+    }
 
 });

@@ -1,7 +1,7 @@
 /* ----------------------------------------
    Public Vars
 --------------------------------------- */
-var door1Blink, door2Blink, door3Blink;
+var door1Blink, door2Blink, door3Blink, doorBlink;
 
 var doorFrame       = $('.door-frame'),
     wttControls     = $('#wtt-controls'),
@@ -35,13 +35,13 @@ function wheresThatToadboy() {
     function doorBlinker(number) {
         doorFrame.eq(number).css("background-color", "#22d7fd");
         setTimeout(function(){ doorFrame.eq(number).css("background-color", "#00fa87"); }, 500);
-    };
+    }
 
     function startDoorBlink() {
         doorBlink = setInterval(function() {
             doorBlinker(0);
-            setTimeout(function() { doorBlinker(1) }, 500);
-            setTimeout(function() { doorBlinker(2) }, 1000);
+            setTimeout(function() { doorBlinker(1); }, 500);
+            setTimeout(function() { doorBlinker(2); }, 1000);
         }, 3000);
     }
 
@@ -56,8 +56,6 @@ function wheresThatToadboy() {
     runWtt.click(function(e) {
         e.preventDefault();
 
-        console.log("test");
-
         var gif1    = $("#gif1").val(),
             gif2    = $("#gif2").val(),
             gif3    = $("#gif3").val();
@@ -66,18 +64,19 @@ function wheresThatToadboy() {
         opening2.css("background-image", "url(" + gif2 + ")");
         opening3.css("background-image", "url(" + gif3 + ")");
 
-
         toadsDoor = Math.floor((Math.random() * 3) + 1);
-        console.log("Toadboy is behind " + toadsDoor);
 
         if ( toadsDoor == 1 ) {
-            opening1.css("background-image", "url(" + toadboy + ")");
+            console.log("That Toadboy is behind " + toadsDoor);
+            opening1.css("background-image", "url(images/wheres-that-toadboy/toadboy-door.png)");
         }
         else if ( toadsDoor == 2 ) {
-            opening2.css("background-image", "url(" + toadboy + ")");
+            console.log("That Toadboy is behind " + toadsDoor);
+            opening2.css("background-image", "url(images/wheres-that-toadboy/toadboy-door.png)");
         }
         else if ( toadsDoor == 3 ) {
-            opening3.css("background-image", "url(" + toadboy + ")");
+            console.log("That Toadboy is behind " + toadsDoor);
+            opening3.css("background-image", "url(images/wheres-that-toadboy/toadboy-door.png)");
         }
 
     });
@@ -110,7 +109,7 @@ function wheresThatToadboy() {
 
         toadTitle.fadeIn(function() {
             toadTitle.delay(6000).fadeOut();
-        })
+        });
     });
 
     door1.click(function(e) {
@@ -158,4 +157,4 @@ function wheresThatToadboy() {
         }, 200);
     });
 
-};
+}
